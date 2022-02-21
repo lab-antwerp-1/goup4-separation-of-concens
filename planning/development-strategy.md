@@ -66,7 +66,7 @@
 
 - [ ] use `.intro` class to stylize greeting/instructions
 
-- this will be developed on the branch `2-input-add`.
+- this will be developed on the branch `1-intro-instructions`.
 
 2 - list input
 
@@ -88,7 +88,8 @@
 - [ ] use `getElementById` and `.appendChild` for handler
 - [ ] use `if` conditional for logic/component
 
-- this will be developed on the branch `1-intro-instructions`.
+- this will be developed on the branch `2-input-add`.
+
 
 3 - list display
 
