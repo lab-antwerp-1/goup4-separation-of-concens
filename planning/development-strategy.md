@@ -90,7 +90,6 @@
 
 - this will be developed on the branch `2-input-add`.
 
-
 3 - list display
 
 > A user can see all the items in their list
