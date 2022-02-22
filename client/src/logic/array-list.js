@@ -1,7 +1,7 @@
 /**
  * Convert user input list items to an array of list items.
  *
- * @param {String} [listItems = ""] - A string of list that user are going to input.
+ * @param {string} [listItems = ""] - A string of list that user are going to input.
  * @returns {Array} - An array of list.
  *
  */
