@@ -24,10 +24,11 @@ export const getInputHandler = (event) => {
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
-  if (title === undefined || title.length === 0) {
+  if (title.length === 0) {
     warnings.innerText = "title box can't be empty";
     return;
-  } else if (listItems === undefined || listItems.length === 0) {
+  }
+  if (listItems.length === 0) {
     warnings.innerText = "list box can't be empty!";
     return;
   }
