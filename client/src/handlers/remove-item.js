@@ -1,9 +1,9 @@
 import { data } from '../../data.js';
-import {removeItemFromArray} from'../logic/remove-item.js';
+import { removeItemFromArray } from '../logic/remove-item.js';
 /**
  * Entry point: user interaction. To remove a specific item from the list.
  * It is called each time the user clicks the item li.
- * 
+ *
  * @param {Event} event - The event triggered when the user clicks the item li.
  */
 
