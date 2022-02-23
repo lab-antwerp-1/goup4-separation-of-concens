@@ -2,6 +2,7 @@
 import '../listeners/input-items.js';
 import { renderList } from '../components/render-list.js';
 import { data } from '../../data.js';
+import '../listeners/remove-list.js';
 
 // render the initial list
 const newList = renderList(Object.keys(data));

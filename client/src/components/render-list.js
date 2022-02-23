@@ -1,4 +1,5 @@
 export const renderList = (toRender = []) => {
+  // debugger;
   const tEl = document.createElement('table');
   for (const nextItem of toRender) {
     const trEl = document.createElement('tr');
