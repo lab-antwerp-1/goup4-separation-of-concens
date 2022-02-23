@@ -1,6 +1,5 @@
 # Logic
 
-
 ## removeItemFromArray
 
 - Remove a specific item from an array.
@@ -13,4 +12,3 @@
 - `arrayOfListItems` convert user input list items to an array of list items.
 
 - It `export` to handler `input-items.js`
-

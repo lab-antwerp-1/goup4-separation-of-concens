@@ -1,4 +1,4 @@
-import '../../data.js';
+import { data } from '../../data.js';
 import '../logic/remove-item.js';
 /**
  * Entry point: user interaction. To remove a specific item from the list.
@@ -6,7 +6,7 @@ import '../logic/remove-item.js';
  */
 
 export const removeItemHandler = (event) => {
-// debugger;
+  // debugger;
 
   /* Not good! The handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
     <div id="m-list-container">
