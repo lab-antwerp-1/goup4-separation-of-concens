@@ -1,2 +1,2 @@
 /* import all event listeners */
-import '../listeners.js';
+import '../listeners/remove-item.js';
