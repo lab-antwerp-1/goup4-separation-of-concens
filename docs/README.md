@@ -17,6 +17,7 @@
 - public
 - src
   - components
+    - [render-list.js](#clientsrccomponentsrender-listjs)
   - handlers
     - [input-items.js](#clientsrchandlersinput-itemsjs)
   - init
@@ -41,6 +42,10 @@
 # /src
 
 ## /components
+
+<details><summary><a href="../../client/src/components/render-list.js" id="clientsrccomponentsrender-listjs">../client/src/components/render-list.js</a></summary>
+
+</details>
 
 ---
 
