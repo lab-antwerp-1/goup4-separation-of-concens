@@ -1,5 +1,3 @@
-@import url('./other-file.css');
-
 /* page body */
 
 /* intro section */
@@ -19,5 +17,21 @@
 }
 
 /* end of intro section */
+
+/* input section  #to do */
+
+.input {
+  font-size: 14px;
+}
+
+.title {
+  border: solid;
+}
+
+.button {
+  font-size: 14px;
+}
+
+/* end of input section */
 
 /* end of page body */
