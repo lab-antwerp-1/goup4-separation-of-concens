@@ -98,17 +98,16 @@
 
 `type: html`
 
-- [ ] use `ul` and `li` for list display
+- [ ] use `table` and `td` for list display
 
 `type: css`
 
-- [ ] use `.list` class to stylize list display
+- [ ] use `.display` class to stylize display section container
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
-- [ ] use `getElementById` and `.appendChild` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `if` conditional for handler
+- [ ] use `createElement` and `appendChild` for component
 
 - this will be developed on the branch `3-list-display`.
 

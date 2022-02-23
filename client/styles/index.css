@@ -34,4 +34,12 @@
 
 /* end of input section */
 
+/* display section */
+
+.display {
+  display: flex;
+}
+
+/* end of display section */
+
 /* end of page body */
