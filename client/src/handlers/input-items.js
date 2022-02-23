@@ -1,5 +1,5 @@
 import { data } from '../../data.js';
-import { arrayOfListItems } from '../logic/array-list.js';
+// import { arrayOfListItems } from '../logic/array-list.js';
 
 /**
  * Entry point for users adding title and item to the list.
@@ -18,20 +18,26 @@ export const getInputHandler = (event) => {
 
   /* -- gather user input from DOM -- */
   const title = event.target.form.text.value;
-  const listItems = event.target.form.items.value;
+  const itemDescription = event.target.form.description.value;
 
   /* check input and update data */
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
   if (title.length === 0) {
-    warnings.innerText = "title box can't be empty";
+    warnings.innerText = 'Please enter a list title';
     return;
   }
-  if (listItems.length === 0) {
-    warnings.innerText = "list box can't be empty!";
+  /*
+  if (itemDescription.length === 0) {
+    warnings.innerText = 'Please enter a list description';
     return;
   }
+  */
+  data[`${title}`] = itemDescription;
+  // console.log(data);
+  /*
   data[`${title}`] = arrayOfListItems(listItems);
-  // console.log(data); // at this point, programmer can see data changes from console; but user can't unless `3 - list display` finished.
+  console.log(data); // at this point, programmer can see data changes from console; but user can't unless `3 - list display` finished.
+  */
 };
