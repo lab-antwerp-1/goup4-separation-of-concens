@@ -35,7 +35,7 @@ export const getInputHandler = (event) => {
   }
   */
   data[`${title}`] = itemDescription;
-  console.log(data);
+  // console.log(data);
   /*
   data[`${title}`] = arrayOfListItems(listItems);
   console.log(data); // at this point, programmer can see data changes from console; but user can't unless `3 - list display` finished.
