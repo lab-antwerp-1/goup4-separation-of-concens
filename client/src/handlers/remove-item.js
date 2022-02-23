@@ -15,7 +15,7 @@ export const removeListHandler = (event) => {
     return;
   }
 
-  // process user input, and get componet index.
+  // process user input, and get component index.
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
