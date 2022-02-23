@@ -1,4 +1,5 @@
 import { data } from '../../data.js';
+import { renderList } from '../components/render-list.js';
 // import { arrayOfListItems } from '../logic/array-list.js';
 
 /**
@@ -40,4 +41,12 @@ export const getInputHandler = (event) => {
   data[`${title}`] = arrayOfListItems(listItems);
   console.log(data); // at this point, programmer can see data changes from console; but user can't unless `3 - list display` finished.
   */
+
+  /* -- render new words -- */
+  const toRender = Object.keys(data);
+  const newList = renderList(toRender);
+
+  const listContainer = document.getElementById('display');
+  listContainer.innerHTML = '';
+  listContainer.appendChild(newList);
 };
