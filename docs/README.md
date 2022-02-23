@@ -17,12 +17,15 @@
 - public
 - src
   - components
+    - [render-list.js](#clientsrccomponentsrender-listjs)
   - handlers
     - [input-items.js](#clientsrchandlersinput-itemsjs)
+    - [remove-item.js](#clientsrchandlersremove-itemjs)
   - init
     - [index.js](#clientsrcinitindexjs)
   - listeners
     - [input-items.js](#clientsrclistenersinput-itemsjs)
+    - [remove-list.js](#clientsrclistenersremove-listjs)
   - logic
     - [array-list.js](#clientsrclogicarray-listjs)
 - styles
@@ -41,6 +44,10 @@
 # /src
 
 ## /components
+
+<details><summary><a href="../../client/src/components/render-list.js" id="clientsrccomponentsrender-listjs">../client/src/components/render-list.js</a></summary>
+
+</details>
 
 ---
 
@@ -61,6 +68,21 @@ It is called each time the user clicks the "add" button.
 
 </details>
 
+<details><summary><a href="../../client/src/handlers/remove-item.js" id="clientsrchandlersremove-itemjs">../client/src/handlers/remove-item.js</a></summary>
+
+<a name="removeListHandler"></a>
+
+## removeListHandler
+
+Entry point: user interaction. To remove a specific list.
+It is called each time the user clicks the "delete"icon.
+
+| Param | Type               | Description                                                 |
+| ----- | ------------------ | ----------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "delete" icon. |
+
+</details>
+
 ---
 
 ## /init
@@ -74,6 +96,10 @@ It is called each time the user clicks the "add" button.
 ## /listeners
 
 <details><summary><a href="../../client/src/listeners/input-items.js" id="clientsrclistenersinput-itemsjs">../client/src/listeners/input-items.js</a></summary>
+
+</details>
+
+<details><summary><a href="../../client/src/listeners/remove-list.js" id="clientsrclistenersremove-listjs">../client/src/listeners/remove-list.js</a></summary>
 
 </details>
 
