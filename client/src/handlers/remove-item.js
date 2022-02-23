@@ -8,20 +8,20 @@ import '../logic/remove-item.js';
 export const removeItemHandler = (event) => {
   // debugger;
 
-  /* // not good!  the handler needs to "know" how you wrote your component 
+  /* not good!  the handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
     <div id="m-list-container">
-        <div class="s-list-container">
+      <div class="s-list-container">
         <h3 class="title">shopping list</h3>
         <i class="fas delete"></i>
         <ul><li>item1</li><li>item2</li</ul>
-        </div>
-        <div class="s-list-container">
+      </div>
+      <div class="s-list-container">
           <h3 class="title">adrass list</h3>
           <i class="fas delete"></i>
           <ul><li>item1</li><li>item2</li</ul>
-          </div>
+      </div>
 </div>
-    */
+*/
   // check the event target
   if (event.target.nodeName !== 'LI') {
     return;
@@ -41,18 +41,19 @@ export const removeItemHandler = (event) => {
  */
 export const removeListHandler = (event) => {
   // debugger;
-  /** not good!  the handler needs to "know" how you wrote your component.
-    <div class="m-list-container">
-        <div class="s-list-container">
+
+  /* not good!  the handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
+    <div id="m-list-container">
+      <div class="s-list-container">
         <h3 class="title">shopping list</h3>
         <i class="fas delete"></i>
         <ul><li>item1</li><li>item2</li</ul>
-        </div>
-        <div class="s-list-container">
+      </div>
+      <div class="s-list-container">
           <h3 class="title">adrass list</h3>
           <i class="fas delete"></i>
           <ul><li>item1</li><li>item2</li</ul>
-          </div>
+      </div>
 </div>
 */
   // check the event target
