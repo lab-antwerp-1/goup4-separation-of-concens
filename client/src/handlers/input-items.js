@@ -1,9 +1,8 @@
 import { data } from '../../data.js';
 import { renderList } from '../components/render-list.js';
-// import { arrayOfListItems } from '../logic/array-list.js';
 
 /**
- * Entry point for users adding title and item to the list.
+ * Entry point for users adding title and description to the list.
  * It is called each time the user clicks the "add" button.
  *
  * @param {Event} event - The event triggered when the user clicks the button.
@@ -29,18 +28,58 @@ export const getInputHandler = (event) => {
     warnings.innerText = 'Please enter a list title';
     return;
   }
-  /*
-  if (itemDescription.length === 0) {
-    warnings.innerText = 'Please enter a list description';
+
+  data[`${title}`] = itemDescription;
+
+  /* -- render new words -- */
+  const toRender = Object.keys(data);
+  const newList = renderList(toRender);
+
+  const listContainer = document.getElementById('display');
+  listContainer.innerHTML = '';
+  listContainer.appendChild(newList);
+};
+
+/**
+ * Entry point for users adding title and description to the list.
+ * It is called each time the user press the "Enter" key.
+ *
+ * @param {Event} event - The event triggered when press the "Enter" key.
+ */
+
+export const getInputWithEnterHandler = (event) => {
+  /* -- entry point for adding a list -- */
+  // debugger;
+
+  /* -- check the target -- */
+  if (
+    event.target.nodeName !== 'INPUT' &&
+    event.target.nodeName !== 'TEXTAREA'
+  ) {
     return;
   }
-  */
+  if (event.key !== 'Enter') {
+    return;
+  }
+  /* -- disable the default event only for tag INPUT -- */
+  if (event.target.nodeName === 'INPUT') {
+    event.preventDefault();
+  }
+
+  /* -- gather user input from DOM -- */
+  const title = event.target.form.text.value;
+  const itemDescription = event.target.form.description.value;
+
+  /* check input and update data */
+  const warnings = document.getElementById('warnings');
+  warnings.innerText = '';
+
+  if (title.length === 0) {
+    warnings.innerText = 'Please enter a list title';
+    return;
+  }
+
   data[`${title}`] = itemDescription;
-  // console.log(data);
-  /*
-  data[`${title}`] = arrayOfListItems(listItems);
-  console.log(data); // at this point, programmer can see data changes from console; but user can't unless `3 - list display` finished.
-  */
 
   /* -- render new words -- */
   const toRender = Object.keys(data);
