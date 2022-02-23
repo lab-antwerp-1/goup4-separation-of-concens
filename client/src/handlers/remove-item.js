@@ -1,8 +1,10 @@
 import { data } from '../../data.js';
-import '../logic/remove-item.js';
+import {removeItemFromArray} from'../logic/remove-item.js';
 /**
  * Entry point: user interaction. To remove a specific item from the list.
- *
+ * It is called each time the user clicks the item li.
+ * 
+ * @param {Event} event - The event triggered when the user clicks the item li.
  */
 
 export const removeItemHandler = (event) => {
@@ -37,7 +39,9 @@ export const removeItemHandler = (event) => {
 
 /**
  * Entry point: user interaction. To remove a specific list.
+ * It is called each time the user clicks the "delete" icon.
  *
+ * @param {Event} event - The event triggered when the user clicks the "delete" icon.
  */
 export const removeListHandler = (event) => {
   // debugger;
@@ -58,7 +62,7 @@ export const removeListHandler = (event) => {
 */
   // check the event target
   if (event.target.nodeName !== 'I') {
-    //I suppose there is a delete icon in i tag.
+    // I supposed there is a "delete" icon in i tag.
     return;
   }
 
