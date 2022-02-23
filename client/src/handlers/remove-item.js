@@ -6,9 +6,9 @@ import '../logic/remove-item.js';
  */
 
 export const removeItemHandler = (event) => {
-  // debugger;
+// debugger;
 
-  /* not good!  the handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
+  /* Not good! The handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
     <div id="m-list-container">
       <div class="s-list-container">
         <h3 class="title">shopping list</h3>
@@ -42,7 +42,7 @@ export const removeItemHandler = (event) => {
 export const removeListHandler = (event) => {
   // debugger;
 
-  /* not good!  the handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
+  /* Not good!  The handler needs to "know" how you wrote your component. I suppose someone in the future will build component like example below.
     <div id="m-list-container">
       <div class="s-list-container">
         <h3 class="title">shopping list</h3>

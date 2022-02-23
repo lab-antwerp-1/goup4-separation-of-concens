@@ -68,7 +68,7 @@
 
 - this will be developed on the branch `1-intro-instructions`.
 
-2 - list input
+2 - list form
 
 > A user can add new items to their list
 
@@ -76,7 +76,7 @@
 
 `type: html`
 
-- [ ] use `input` and `button` for input section
+- [ ] use `form` and `input` for input section
 
 `type: css`
 
