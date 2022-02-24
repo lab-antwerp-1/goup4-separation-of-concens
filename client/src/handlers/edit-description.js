@@ -18,22 +18,44 @@ export const editDescription = (event) => {
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
-  const indexOfDescription = indexOfTarget - 1;
-  const itemDescription =
-    event.target.parentElement.children[indexOfDescription].textContent;
+  const indexOfItem = indexOfTarget - 1;
+  const itemTitle =
+    event.target.parentElement.children[indexOfItem].textContent;
+
+  // <p contenteditable="true">This is an editable paragraph.</p>
+
   /*
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
   warnings.innerText = 'Please enter new description';
 */
+
   /*
-  const description = document.getElementById('description');
-  const newDescription = description.value;
+  data[`${itemTitle}`] = null;
+  let newDescription = '';
+  if (data[`${itemTitle}`] === null) {
+    const warnings = document.getElementById('warnings');
+    warnings.innerText = '';
+    warnings.innerText = 'Please enter new description';
+    const changeDescription = document.createElement('input');
+    const descriptionButton = document.createElement('button');
+    descriptionButton.type = 'submit';
+    descriptionButton.innerHTML = 'update description';
+    changeDescription.type = 'text';
+    changeDescription.id = 'description-input';
+    warnings.appendChild(descriptionButton);
+    warnings.appendChild(changeDescription);
+    const description = document.getElementById('description-input');
+    newDescription = description.value;
+  }
 */
+  // const description = document.getElementById('description');
+  // const newDescription = description.value;
+
   const newDescription = prompt('please enter new description');
 
   // update state
-  data[`${itemDescription}`] = newDescription;
+  data[`${itemTitle}`] = newDescription;
 
   // update the UI
   const newList = renderTable(Object.keys(data), Object.values(data));
