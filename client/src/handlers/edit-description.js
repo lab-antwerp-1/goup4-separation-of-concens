@@ -26,8 +26,12 @@ export const editDescription = (event) => {
   warnings.innerText = '';
   warnings.innerText = 'Please enter new description';
 */
+  /*
   const description = document.getElementById('description');
   const newDescription = description.value;
+*/
+  const newDescription = prompt('please enter new description');
+
   // update state
   data[`${itemDescription}`] = newDescription;
 
