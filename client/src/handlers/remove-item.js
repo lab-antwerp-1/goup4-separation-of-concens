@@ -11,7 +11,7 @@ import { renderTable } from '../components/render-table.js';
 export const removeListHandler = (event) => {
   // debugger;
   // check the event target
-  if (event.target.nodeName !== 'IMG') {
+  if (event.target.id !== 'remove-item') {
     return;
   }
 
