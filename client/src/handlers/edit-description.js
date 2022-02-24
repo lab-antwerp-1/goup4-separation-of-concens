@@ -21,8 +21,10 @@ export const editDescription = (event) => {
   const indexOfTitle = indexOfTarget - 1;
   const title = event.target.parentElement.children[indexOfTitle].textContent;
 
+  const description = document.getElementById('description');
+  const newDescription = description;
   // update state
-  delete data[`${title}`];
+  data[`${title}`] = newDescription;
 
   // update the UI
   const newList = renderTable(Object.keys(data), Object.values(data));
