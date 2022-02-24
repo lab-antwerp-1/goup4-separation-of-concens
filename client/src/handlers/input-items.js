@@ -54,7 +54,7 @@ export const getInputWithEnterHandler = (event) => {
   /* -- check the target -- */
   if (
     event.target.nodeName !== 'INPUT'
-    // && event.target.nodeName !== 'TEXTAREA' // stop handling Enter key on textarea
+    // && event.target.nodeName !== 'TEXTAREA' // stop handling Enter key on text area.
   ) {
     return;
   }
