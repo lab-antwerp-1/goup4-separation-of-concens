@@ -1,5 +1,5 @@
 import { data } from '../../data.js';
-import { renderList } from '../components/render-list.js';
+import { renderTable } from '../components/render-table.js';
 /**
  * Entry point: user interaction. To remove a specific list.
  * It is called each time the user clicks the "delete"icon.
@@ -26,7 +26,7 @@ export const removeListHandler = (event) => {
   delete data[`${title}`];
 
   // update the UI
-  const newList = renderList(Object.keys(data));
+  const newList = renderTable(Object.keys(data));
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
