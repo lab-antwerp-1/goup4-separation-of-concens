@@ -30,7 +30,6 @@ export const editDescription = (event) => {
   warnings.innerText = 'Please enter new description';
 */
 
-  /*
   data[`${itemTitle}`] = null;
   let newDescription = '';
   if (data[`${itemTitle}`] === null) {
@@ -39,6 +38,7 @@ export const editDescription = (event) => {
     warnings.innerText = 'Please enter new description';
     const changeDescription = document.createElement('input');
     const descriptionButton = document.createElement('button');
+    descriptionButton.id = 'description-button';
     descriptionButton.type = 'submit';
     descriptionButton.innerHTML = 'update description';
     changeDescription.type = 'text';
@@ -48,11 +48,11 @@ export const editDescription = (event) => {
     const description = document.getElementById('description-input');
     newDescription = description.value;
   }
-*/
+
   // const description = document.getElementById('description');
   // const newDescription = description.value;
 
-  const newDescription = prompt('please enter new description');
+  // const newDescription = prompt('please enter new description');
 
   // update state
   data[`${itemTitle}`] = newDescription;
