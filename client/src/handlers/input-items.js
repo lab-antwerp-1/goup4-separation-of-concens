@@ -1,5 +1,5 @@
 import { data } from '../../data.js';
-import { renderList } from '../components/render-list.js';
+import { renderTable } from '../components/render-table.js';
 
 /**
  * Entry point for users adding title and description to the list.
@@ -32,8 +32,14 @@ export const getInputHandler = (event) => {
   data[`${title}`] = itemDescription;
 
   /* -- render new words -- */
+
+  /*  
   const toRender = Object.keys(data);
   const newList = renderList(toRender);
+*/
+  const itemToRender = Object.keys(data);
+  const descriptionToRender = Object.values(data);
+  const newList = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
@@ -82,8 +88,13 @@ export const getInputWithEnterHandler = (event) => {
   data[`${title}`] = itemDescription;
 
   /* -- render new words -- */
+  /*  
   const toRender = Object.keys(data);
-  const newList = renderList(toRender);
+  const newList = renderTable(toRender);
+*/
+  const itemToRender = Object.keys(data);
+  const descriptionToRender = Object.values(data);
+  const newList = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
