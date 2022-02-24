@@ -1,8 +1,9 @@
 /* --- import all listener files so they can attach to the DOM --- */
-import '../listeners/input-items.js';
 import { renderTable } from '../components/render-table.js';
 import { data } from '../../data.js';
+import '../listeners/input-items.js';
 import '../listeners/remove-list.js';
+import '../listeners/edit-description.js';
 
 // render the initial list
 const newList = renderTable(Object.keys(data));

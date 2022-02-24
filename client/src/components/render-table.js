@@ -11,6 +11,7 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     const descriptionTdEl = document.createElement('td');
     const editImgEl = document.createElement('img');
     editImgEl.src = 'client/public/description-edit-3.png';
+    editImgEl.id = 'edit';
     descriptionTdEl.innerText = descriptionToRender[i];
     itemTdEl.innerText = itemToRender[i];
     descriptionTrEl.appendChild(descriptionTdEl);
