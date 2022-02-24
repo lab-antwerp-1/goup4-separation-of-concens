@@ -18,13 +18,18 @@ export const editDescription = (event) => {
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
-  const indexOfTitle = indexOfTarget - 1;
-  const title = event.target.parentElement.children[indexOfTitle].textContent;
-
+  const indexOfDescription = indexOfTarget - 1;
+  const itemDescription =
+    event.target.parentElement.children[indexOfDescription].textContent;
+  /*
+  const warnings = document.getElementById('warnings');
+  warnings.innerText = '';
+  warnings.innerText = 'Please enter new description';
+*/
   const description = document.getElementById('description');
-  const newDescription = description;
+  const newDescription = description.value;
   // update state
-  data[`${title}`] = newDescription;
+  data[`${itemDescription}`] = newDescription;
 
   // update the UI
   const newList = renderTable(Object.keys(data), Object.values(data));

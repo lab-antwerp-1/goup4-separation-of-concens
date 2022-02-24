@@ -19,14 +19,14 @@ export const removeListHandler = (event) => {
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
-  const indexOfTitle = indexOfTarget - 1;
+  const indexOfTitle = indexOfTarget - 2;
   const title = event.target.parentElement.children[indexOfTitle].textContent;
 
   // update state
   delete data[`${title}`];
 
   // update the UI
-  const newList = renderTable(Object.keys(data));
+  const newList = renderTable(Object.keys(data), Object.values(data));
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';

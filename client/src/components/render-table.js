@@ -16,8 +16,8 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     itemTdEl.innerText = itemToRender[i];
     descriptionTrEl.appendChild(descriptionTdEl);
     itemTrEl.appendChild(itemTdEl);
+    itemTrEl.appendChild(editImgEl);
     itemTrEl.appendChild(removeImgEl);
-    descriptionTrEl.appendChild(editImgEl);
     tEl.appendChild(itemTrEl);
     tEl.appendChild(descriptionTrEl);
   }
