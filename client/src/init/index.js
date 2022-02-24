@@ -6,7 +6,7 @@ import '../listeners/remove-list.js';
 import '../listeners/edit-description.js';
 
 // render the initial list
-const newList = renderTable(Object.keys(data));
+const newList = renderTable(data);
 
 const listContainer = document.getElementById('display');
 listContainer.innerHTML = '';

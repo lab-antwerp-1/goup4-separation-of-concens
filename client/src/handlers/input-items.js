@@ -37,9 +37,8 @@ export const getInputHandler = (event) => {
   const toRender = Object.keys(data);
   const newList = renderList(toRender);
 */
-  const itemToRender = Object.keys(data);
-  const descriptionToRender = Object.values(data);
-  const newList = renderTable(itemToRender, descriptionToRender);
+
+  const newList = renderTable(data);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
@@ -92,9 +91,8 @@ export const getInputWithEnterHandler = (event) => {
   const toRender = Object.keys(data);
   const newList = renderTable(toRender);
 */
-  const itemToRender = Object.keys(data);
-  const descriptionToRender = Object.values(data);
-  const newList = renderTable(itemToRender, descriptionToRender);
+
+  const newList = renderTable(data);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
