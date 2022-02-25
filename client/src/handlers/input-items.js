@@ -29,7 +29,7 @@ export const getInputHandler = (event) => {
     return;
   }
 
-  data[`${title}`] = itemDescription;
+  data[title] = itemDescription;
 
   /* -- render new words -- */
   const toRender = Object.keys(data);
@@ -79,7 +79,7 @@ export const getInputWithEnterHandler = (event) => {
     return;
   }
 
-  data[`${title}`] = itemDescription;
+  data[title] = itemDescription;
 
   /* -- render new words -- */
   const toRender = Object.keys(data);
