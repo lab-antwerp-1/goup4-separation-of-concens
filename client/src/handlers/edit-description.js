@@ -18,8 +18,8 @@ export const editDescription = (event) => {
   document
     .getElementById('display')
     .removeEventListener('click', editDescription);
-  const table = document.getElementById('display-table');
 
+  const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
   const indexFu = (par1, par2) => {
     let sum = 0;
