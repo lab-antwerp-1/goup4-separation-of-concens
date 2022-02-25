@@ -39,11 +39,11 @@ export const getInputHandler = (event) => {
 */
   const itemToRender = Object.keys(data);
   const descriptionToRender = Object.values(data);
-  const newList = renderTable(itemToRender, descriptionToRender);
+  const newTable = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+  listContainer.appendChild(newTable);
 };
 
 /**
@@ -94,9 +94,9 @@ export const getInputWithEnterHandler = (event) => {
 */
   const itemToRender = Object.keys(data);
   const descriptionToRender = Object.values(data);
-  const newList = renderTable(itemToRender, descriptionToRender);
+  const newTable = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+  listContainer.appendChild(newTable);
 };

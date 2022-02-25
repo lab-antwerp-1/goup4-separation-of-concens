@@ -26,9 +26,9 @@ export const removeListHandler = (event) => {
   delete data[`${title}`];
 
   // update the UI
-  const newList = renderTable(Object.keys(data), Object.values(data));
+  const newTable = renderTable(Object.keys(data), Object.values(data));
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+  listContainer.appendChild(newTable);
 };
