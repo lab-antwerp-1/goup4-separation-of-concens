@@ -20,6 +20,7 @@ export const newDescription = (event) => {
   warnings.innerHTML = 'please enter a new description';
   const newDescriptionInput = document.createElement('input');
   newDescriptionInput.id = 'new-input';
+  newDescriptionInput.placeholder = 'new description';
   warnings.appendChild(newDescriptionInput);
   document.getElementById('display').addEventListener('click', editDescription);
 };
