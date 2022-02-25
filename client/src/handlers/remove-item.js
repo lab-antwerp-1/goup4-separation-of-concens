@@ -42,7 +42,7 @@ export const removeListHandler = (event) => {
  */
 
 export const removeAllListHandler = (event) => {
-  debugger;
+  // debugger;
   // check the event target
   if (event.target.id !== 'reset-list') {
     return;
@@ -53,7 +53,6 @@ export const removeAllListHandler = (event) => {
   }
   // update the UI
   const newTable = renderTable(Object.keys(data), Object.values(data));
-  debugger;
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
   listContainer.appendChild(newTable);
