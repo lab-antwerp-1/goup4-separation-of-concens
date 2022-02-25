@@ -26,3 +26,25 @@
   - data.js
   - /components/render-list.js
 - It `export` to listeners `input-items.js`
+
+## references
+
+```js
+/*
+    reference 3
+
+  data[`${itemTitle}`] = null;
+  // let newDescription = '';
+  const warnings = document.getElementById('warnings');
+  warnings.innerText = 'Please enter new description';
+  const changeDescription = document.createElement('input');
+  const descriptionButton = document.createElement('button');
+  descriptionButton.id = 'description-button';
+  descriptionButton.type = 'submit';
+  descriptionButton.innerHTML = 'update description';
+  changeDescription.type = 'text';
+  changeDescription.id = 'description-input';
+  warnings.appendChild(descriptionButton);
+  warnings.appendChild(changeDescription);
+*/
+```
