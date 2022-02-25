@@ -2,7 +2,7 @@ import { data } from '../../data.js';
 import { renderTable } from '../components/render-table.js';
 /**
  * Entry point: user interaction. To remove a specific list.
- * It is called each time the user clicks the "delete"icon.
+ * It is called each time the user clicks the "trash can" img.
  *
  * @param {Event} event - The event triggered when the user clicks the "delete" icon.
  *
@@ -28,6 +28,32 @@ export const removeListHandler = (event) => {
   // update the UI
   const newTable = renderTable(Object.keys(data), Object.values(data));
 
+  const listContainer = document.getElementById('display');
+  listContainer.innerHTML = '';
+  listContainer.appendChild(newTable);
+};
+
+/**
+ * Entry point: user interaction. To remove the entire list.
+ * It is called each time the user clicks the "trash can" img.
+ *
+ * @param {Event} event - The event triggered when the user clicks the "trash can" img.
+ *
+ */
+
+export const removeAllListHandler = (event) => {
+  debugger;
+  // check the event target
+  if (event.target.id !== 'reset-list') {
+    return;
+  }
+  // update state
+  for (const key in data) {
+    delete data[key];
+  }
+  // update the UI
+  const newTable = renderTable(Object.keys(data), Object.values(data));
+  debugger;
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
   listContainer.appendChild(newTable);
