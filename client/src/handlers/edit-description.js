@@ -59,7 +59,7 @@ export const editDescription = (event) => {
   const toRenderDescription = description.value;
   // update state
 
-  data[`${itemTitle}`] = toRenderDescription;
+  data[itemTitle] = toRenderDescription;
 
   // update the UI
   const newTable = renderTable(Object.keys(data), Object.values(data));

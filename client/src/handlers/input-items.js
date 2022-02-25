@@ -85,7 +85,7 @@ export const getInputWithEnterHandler = (event) => {
     return;
   }
 
-  data[`${title}`] = itemDescription;
+  data[title] = itemDescription;
 
   /* -- render new words -- */
   /*  
