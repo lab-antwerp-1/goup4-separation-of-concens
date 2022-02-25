@@ -23,7 +23,7 @@ export const removeListHandler = (event) => {
   const title = event.target.parentElement.children[indexOfTitle].textContent;
 
   // update state
-  delete data[`${title}`];
+  delete data[title];
 
   // update the UI
   const newList = renderList(Object.keys(data));
