@@ -8,6 +8,7 @@ import { newDescription } from './new-description.js';
  * @param {Event} event - The event triggered when the user clicks the "edit" icon.
  *
  */
+
 export const editDescription = (event) => {
   // debugger;
   // check the event target
