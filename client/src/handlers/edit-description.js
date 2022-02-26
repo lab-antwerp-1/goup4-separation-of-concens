@@ -12,7 +12,12 @@ import { newDescription } from './new-description.js';
 export const editDescription = (event) => {
   // debugger;
   // check the event target
-
+  // if (
+  //   event.target.parentElement.parentElement.children[1].children.length !== 2
+  // ) {
+  //   console.log('nope2');
+  //   return;
+  // }
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
   const indexFu = (par1, par2) => {
