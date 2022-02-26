@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./client/public/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List Maker</title>
 
-    <link href="./client/styles/index.css" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- page body -->
-    <div id="page">
-      <!-- intro section -->
-      <div class="intro">
-        <h1 class="header">List Maker</h1>
-        <p class="instructions">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./client/public/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Maker</title>
+  <link href="./client/styles/index.css" rel="stylesheet" />
+  <!-- <link href="./client/styles/bootstrap.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+  <!-- page body -->
+  <!--  d-flex justify-content-center -->
+  <div class="page" id="page">
+    <!-- intro section -->
+    <div class="intro">
+      <!-- this is help section. it will appear when user need help -->
+      <!-- <p class="instructions">
           Welcome to list maker!<br />Our page will help you stay on top of your
           lists.<br />
           To get started simply type your first item in the box below and a new
@@ -28,29 +31,56 @@
           dropbox.<br />You can also stylize your items using the 'stylize'
           button.<br /><br />Enjoy making your lists and check back for new
           features in the future!
-        </p>
-      </div>
-      <!-- end of intro section -->
-      <!-- input section -->
+        </p> -->
+    </div>
+    <!-- end of intro section -->
+    <!-- input section -->
+    <div class="wrap">
+      <h1 class="header">List Maker</h1>
       <form class="input" id="input-area">
         <!-- // action="" -->
         <input name="text" placeholder="Enter title" class="title" />
-        <textarea
-          name="description"
-          cols="200"
-          rows="5"
-          placeholder="Enter description:"
-        ></textarea>
+        <textarea name="description" cols="200" rows="5" placeholder="Enter description:"></textarea>
         <input type="button" class="button" value="add" id="add" />
       </form>
       <code id="warnings" class="warning"></code>
       <!-- end of input section -->
-      <!-- display section -->
-      <div id="display" class="display"></div>
-      <!-- end of display section -->
-    </div>
-    <!-- end of page body -->
 
-    <script type="module" src="./client/src/init/index.js"></script>
-  </body>
+      <!-- display section -->
+      <div class="todo-items">
+        <div id="display" class="display"></div>
+      </div>
+      <!-- end of display section -->
+
+      <!-- footer -->
+      <div class="footer">
+        <footer>
+          <i class="help">
+            <img src="./client/public/alert-circle.png">
+          </i>
+          <i class="share">
+            <img src="./client/public/share-2.png">
+          </i>
+          <i class="format">
+            <img src="./client/public/format-icon.png">
+          </i>
+          <i class="sort">
+            <img src="./client/public/sort-icon.png">
+          </i>
+          <i class="reset">
+            <img src="./client/public/trash-gry.png">
+          </i>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end footer -->
+
+  <!-- end of page body -->
+
+  <script type="module" src="./client/src/init/index.js"></script>
+</body>
+
+
 </html>
