@@ -10,7 +10,7 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     // itemTdEl.contentEditable = true;
     const removeImgEl = document.createElement('img');
     removeImgEl.src = 'client/public/trash-2.png';
-    removeImgEl.id = 'remove-item';
+    removeImgEl.id = `remove-${index}`;
     const descriptionTrEl = document.createElement('tr');
     const descriptionTdEl = document.createElement('td');
     descriptionTrEl.id = `description-row-${index}`;
@@ -18,7 +18,7 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     // descriptionTdEl.contentEditable = true;
     const editImgEl = document.createElement('img');
     editImgEl.src = 'client/public/description-edit-3.png';
-    editImgEl.id = 'edit';
+    editImgEl.id = `edit-${index}`;
     descriptionTdEl.innerText = descriptionToRender[i];
     itemTdEl.innerText = itemToRender[i];
     descriptionTrEl.appendChild(descriptionTdEl);

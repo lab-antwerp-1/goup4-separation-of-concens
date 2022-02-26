@@ -1,10 +1,6 @@
 import { editDescription } from './edit-description.js';
 
 export const newDescription = (event) => {
-  if (event.target.id !== 'edit') {
-    return;
-  }
-
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
   const indexFu = (par1, par2) => {
@@ -17,17 +13,11 @@ export const newDescription = (event) => {
     return sum;
   };
   const index = (indexFu(table, eventTr) + 2) / 2;
-  // const index = preIndex / 2;
-  // console.log(table.id, eventTr.id, index);
 
-  // const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
-  //   event.target,
-  // );
-  /* 
-  const indexOfItem = indexOfTarget + 1;
-  const itemTitle =
-    event.target.parentElement.children[indexOfItem].textContent;
-*/
+  if (event.target.id !== `edit-${index}`) {
+    return;
+  }
+
   document
     .getElementById('display')
     .removeEventListener('click', newDescription);
@@ -51,4 +41,15 @@ export const newDescription = (event) => {
   newDescriptionInput.id = 'new-input';
   newDescriptionInput.placeholder = 'new description';
   warnings.appendChild(newDescriptionInput);
+*/
+// const index = preIndex / 2;
+// console.log(table.id, eventTr.id, index);
+
+// const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
+//   event.target,
+// );
+/* 
+  const indexOfItem = indexOfTarget + 1;
+  const itemTitle =
+    event.target.parentElement.children[indexOfItem].textContent;
 */

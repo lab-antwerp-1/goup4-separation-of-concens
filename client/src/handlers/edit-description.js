@@ -11,13 +11,6 @@ import { newDescription } from './new-description.js';
 export const editDescription = (event) => {
   // debugger;
   // check the event target
-  if (event.target.id !== 'edit') {
-    return;
-  }
-
-  document
-    .getElementById('display')
-    .removeEventListener('click', editDescription);
 
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
@@ -35,6 +28,14 @@ export const editDescription = (event) => {
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
+
+  if (event.target.id !== `edit-${index}`) {
+    return;
+  }
+  document
+    .getElementById('display')
+    .removeEventListener('click', editDescription);
+
   const indexOfItem = indexOfTarget - 1;
   const itemTitle =
     event.target.parentElement.children[indexOfItem].textContent;
@@ -84,4 +85,5 @@ const warnings = document.getElementById('warnings');
 // const description = document.getElementById('description');
 // const newDescription = description.value;
 
+// work
 // const newDescription = prompt('please enter new description');
