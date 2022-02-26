@@ -1,5 +1,5 @@
 import { data } from '../../data.js';
-import { renderList } from '../components/render-list.js';
+import { renderTable } from '../components/render-table.js';
 
 /**
  * Entry point for users adding title and description to the list.
@@ -29,15 +29,21 @@ export const getInputHandler = (event) => {
     return;
   }
 
-  data[`${title}`] = itemDescription;
+  data[title] = itemDescription;
 
   /* -- render new words -- */
+
+  /*  
   const toRender = Object.keys(data);
   const newList = renderList(toRender);
+*/
+  const itemToRender = Object.keys(data);
+  const descriptionToRender = Object.values(data);
+  const newTable = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+  listContainer.appendChild(newTable);
 };
 
 /**
@@ -53,8 +59,8 @@ export const getInputWithEnterHandler = (event) => {
 
   /* -- check the target -- */
   if (
-    event.target.nodeName !== 'INPUT' &&
-    event.target.nodeName !== 'TEXTAREA'
+    event.target.nodeName !== 'INPUT'
+    // && event.target.nodeName !== 'TEXTAREA' // stop handling Enter key on text area.
   ) {
     return;
   }
@@ -79,13 +85,18 @@ export const getInputWithEnterHandler = (event) => {
     return;
   }
 
-  data[`${title}`] = itemDescription;
+  data[title] = itemDescription;
 
   /* -- render new words -- */
+  /*  
   const toRender = Object.keys(data);
-  const newList = renderList(toRender);
+  const newList = renderTable(toRender);
+*/
+  const itemToRender = Object.keys(data);
+  const descriptionToRender = Object.values(data);
+  const newTable = renderTable(itemToRender, descriptionToRender);
 
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
-  listContainer.appendChild(newList);
+  listContainer.appendChild(newTable);
 };
