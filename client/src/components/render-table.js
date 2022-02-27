@@ -1,8 +1,10 @@
 export const renderTable = (itemToRender = [], descriptionToRender = []) => {
   // debugger;
   const tEl = document.createElement('table');
+  tEl.classList.add('table');
   for (let i = 0; i < itemToRender.length; i++) {
     const itemTrEl = document.createElement('tr');
+    itemTrEl.classList.add('row');
     const itemTdEl = document.createElement('td');
     // itemTdEl.contentEditable = true;
     const removeImgEl = document.createElement('img');
