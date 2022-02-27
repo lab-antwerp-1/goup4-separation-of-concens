@@ -21,6 +21,7 @@ export const getInputHandler = (event) => {
   const itemDescription = event.target.form.description.value;
 
   /* check input and update data */
+  // if input box contains nothing, send warning and return
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
@@ -28,8 +29,12 @@ export const getInputHandler = (event) => {
     warnings.innerText = 'Please enter a list title';
     return;
   }
-
+  // otherwise, add content to data and clear the input box
   data[title] = itemDescription;
+  document.getElementById('input-area').text.value = ''; //
+  document.getElementById('description').value = ''; //
+  // document.getElementById('input-area').text.placeholder = 'Enter new title'; // works, but it's kind of confusing with edit
+  // document.getElementById('description').placeholder = 'Enter new description:'; // // works, but it's kind of confusing with edit
 
   /* -- render new words -- */
 
@@ -77,6 +82,7 @@ export const getInputWithEnterHandler = (event) => {
   const itemDescription = event.target.form.description.value;
 
   /* check input and update data */
+  // if input box contains nothing, send warning and return
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
@@ -84,9 +90,12 @@ export const getInputWithEnterHandler = (event) => {
     warnings.innerText = 'Please enter a list title';
     return;
   }
-
+  // otherwise, add content to data and clear the input box
   data[title] = itemDescription;
-
+  document.getElementById('input-area').text.value = ''; //
+  document.getElementById('description').value = ''; //
+  // document.getElementById('input-area').text.placeholder = 'Enter new title';    // works, but it's kind of confusing with edit
+  // document.getElementById('description').placeholder = 'Enter new description:';   // works, but it's kind of confusing with edit
   /* -- render new words -- */
   /*  
   const toRender = Object.keys(data);
