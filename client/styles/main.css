@@ -94,20 +94,11 @@ body {
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  height: 40px;
   border-radius: 5px;
-  box-shadow: 0px 4px 4px #ecd4e1;
+  box-shadow: 2px 4px 4px #ecd4e1;
   background: linear-gradient(90deg, #a8d2a5 0%, #acd4e1 115.2%);
   border: none;
 }
-
-/* display section */
-/* 
-.todo-items {
-  text-align: center;
-  margin-top: 20px;
-  width: 100%;
-} */
 
 .display {
   display: grid;
