@@ -12,12 +12,19 @@ import { newDescription } from './new-description.js';
 export const editDescription = (event) => {
   // debugger;
   // check the event target
-  // if (
-  //   event.target.parentElement.parentElement.children[1].children.length !== 2
-  // ) {
-  //   console.log('nope2');
-  //   return;
-  // }
+
+  /*
+  console.log(event.target.parentElement.nextElementSibling.id);
+  if (
+    event.target.parentElement.parentElement.children[1].children.length !== 2
+  ) {
+    console.log('nope2');
+    console.log(
+      event.target.parentElement.parentElement.children[1].children.length,
+    );
+    return;
+  }
+  */
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
   const indexFu = (par1, par2) => {
@@ -34,8 +41,9 @@ export const editDescription = (event) => {
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
   );
-
-  if (event.target.id !== `edit-${index}`) {
+  const kid = document.getElementById(`description-row-${index}`);
+  // console.log(kid.id, kid.children.length);
+  if (event.target.id !== `edit-${index}` || kid.children.length !== 2) {
     return;
   }
   document
