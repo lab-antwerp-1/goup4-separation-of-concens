@@ -21,6 +21,7 @@ export const getInputHandler = (event) => {
   const itemDescription = event.target.form.description.value;
 
   /* check input and update data */
+  // if input box contains nothing, send warning and return
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
@@ -28,8 +29,10 @@ export const getInputHandler = (event) => {
     warnings.innerText = 'Please enter a list title';
     return;
   }
-
+  // otherwise, add content to data and clear the input box
   data[title] = itemDescription;
+  document.getElementById('input-area').text.value = ''; //
+  document.getElementById('description').value = ''; //
 
   /* -- render new words -- */
 
@@ -77,6 +80,7 @@ export const getInputWithEnterHandler = (event) => {
   const itemDescription = event.target.form.description.value;
 
   /* check input and update data */
+  // if input box contains nothing, send warning and return
   const warnings = document.getElementById('warnings');
   warnings.innerText = '';
 
@@ -84,8 +88,10 @@ export const getInputWithEnterHandler = (event) => {
     warnings.innerText = 'Please enter a list title';
     return;
   }
-
+  // otherwise, add content to data and clear the input box
   data[title] = itemDescription;
+  document.getElementById('input-area').text.value = ''; //
+  document.getElementById('description').value = ''; //
 
   /* -- render new words -- */
   /*  
