@@ -30,7 +30,8 @@ export const newDescription = (event) => {
     .getElementById('display')
     .removeEventListener('click', newDescription);
   const warnings = document.getElementById('warnings');
-  warnings.innerHTML = 'please enter a new description';
+  warnings.innerHTML =
+    'please enter a new description and click the pen icon to save';
   const newDescriptionInput = document.createElement('input');
   // console.log(newDescriptionInput.innerText);
   newDescriptionInput.id = `new-input-${index}`;
