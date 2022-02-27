@@ -33,6 +33,8 @@ export const getInputHandler = (event) => {
   data[title] = itemDescription;
   document.getElementById('input-area').text.value = ''; //
   document.getElementById('description').value = ''; //
+  document.getElementById('input-area').text.placeholder = 'Enter new title'; //
+  document.getElementById('description').placeholder = 'Enter new description:'; //
 
   /* -- render new words -- */
 
@@ -92,7 +94,8 @@ export const getInputWithEnterHandler = (event) => {
   data[title] = itemDescription;
   document.getElementById('input-area').text.value = ''; //
   document.getElementById('description').value = ''; //
-
+  document.getElementById('input-area').text.placeholder = 'Enter new title'; //
+  document.getElementById('description').placeholder = 'Enter new description:'; //
   /* -- render new words -- */
   /*  
   const toRender = Object.keys(data);
