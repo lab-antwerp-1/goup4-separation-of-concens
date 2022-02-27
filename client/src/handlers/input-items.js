@@ -33,7 +33,7 @@ export const getInputHandler = (event) => {
   data[title] = itemDescription;
   document.getElementById('input-area').text.value = ''; //
   document.getElementById('description').value = ''; //
-  // document.getElementById('input-area').text.placeholder = 'Enter new title'; // works, but it's kind of confu
+  // document.getElementById('input-area').text.placeholder = 'Enter new title'; // works, but it's kind of confusing with edit
   // document.getElementById('description').placeholder = 'Enter new description:'; // // works, but it's kind of confusing with edit
 
   /* -- render new words -- */
