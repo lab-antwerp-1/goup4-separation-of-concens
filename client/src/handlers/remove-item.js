@@ -60,10 +60,12 @@ export const removeAllListHandler = (event) => {
   if (event.target.id !== 'reset-list') {
     return;
   }
+
   // update state
   for (const key in data) {
     delete data[key];
   }
+
   // update the UI
   const newTable = renderTable(Object.keys(data), Object.values(data));
   const listContainer = document.getElementById('display');
