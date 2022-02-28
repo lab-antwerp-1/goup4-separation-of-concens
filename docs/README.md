@@ -66,7 +66,7 @@ A function that renders a table element from user inputted item title and descri
 **Example**
 
 ```js
-// ["item title 1", "item title 2"], ["item description 1", "item description 2"]
+/* ["item title 1", "item title 2"], ["item description 1", "item description 2"]
   --> "<table id="display-table">
         <tr id="item-row-1">
          <td id=item-td-1">item title 1</td>
@@ -85,6 +85,7 @@ A function that renders a table element from user inputted item title and descri
          <td id="description-td-2">item description 2</td>
         </tr>
        </table>"
+       */
 ```
 
 </details>
