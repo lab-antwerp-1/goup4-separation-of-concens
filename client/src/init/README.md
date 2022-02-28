@@ -15,4 +15,5 @@
 
 ### html initialization
 
-- initialize `ul` element by `list-container` id
+- initialize `table` section by `display` id
+- will render data object through render component
