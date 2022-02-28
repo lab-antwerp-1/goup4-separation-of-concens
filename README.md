@@ -38,7 +38,7 @@ Navigating to `demo.html` will run the example website for reverse-engineering.
 
 ## Developing your Code
 
-This project is a full website so you will need to run it by opening `index.html` in the browser.
+This page is a full website so you will need to run it by opening `index.html` in the browser.
 
 It's recommended that you use VSCode to write your HTML, CSS and JavaScript. Each time you make a change in VSCode you will need to go to the browser and refresh to see if it worked. Everything you have learned about the debugger will come in handy! You can use breakpoints and `debugger` statements to step through while your website is running.
 
