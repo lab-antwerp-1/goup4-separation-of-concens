@@ -66,7 +66,7 @@ A function that renders a table element from user inputted item title and descri
 **Example**
 
 ```js
-/* ["item title 1", "item title 2"], ["item description 1", "item description 2"]
+// ["item title 1", "item title 2"], ["item description 1", "item description 2"]
   --> "<table id="display-table">
         <tr id="item-row-1">
          <td id=item-td-1">item title 1</td>
@@ -85,7 +85,6 @@ A function that renders a table element from user inputted item title and descri
          <td id="description-td-2">item description 2</td>
         </tr>
        </table>"
-       */
 ```
 
 </details>
@@ -161,22 +160,44 @@ It is called each time the user clicks the "edit" icon.
 | ----- | ------------------ | --------------------------------------------------------- |
 | event | <code>Event</code> | The event triggered when the user clicks the "edit" icon. |
 
-=======
-
 </details>
 
 <details><summary><a href="../../client/src/handlers/remove-item.js" id="clientsrchandlersremove-itemjs">../client/src/handlers/remove-item.js</a></summary>
+
+## Constants
+
+<dl>
+<dt><a href="#removeListHandler">removeListHandler</a></dt>
+<dd><p>Entry point: user interaction. To remove a specific list.
+It is called each time the user clicks the &quot;trash can&quot; img.</p>
+</dd>
+<dt><a href="#removeAllListHandler">removeAllListHandler</a></dt>
+<dd><p>Entry point: user interaction. To remove the entire list.
+It is called each time the user clicks the &quot;trash can&quot; img.</p>
+</dd>
+</dl>
 
 <a name="removeListHandler"></a>
 
 ## removeListHandler
 
 Entry point: user interaction. To remove a specific list.
-It is called each time the user clicks the "delete"icon.
+It is called each time the user clicks the "trash can" img.
 
 | Param | Type               | Description                                                 |
 | ----- | ------------------ | ----------------------------------------------------------- |
 | event | <code>Event</code> | The event triggered when the user clicks the "delete" icon. |
+
+<a name="removeAllListHandler"></a>
+
+## removeAllListHandler
+
+Entry point: user interaction. To remove the entire list.
+It is called each time the user clicks the "trash can" img.
+
+| Param | Type               | Description                                                   |
+| ----- | ------------------ | ------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "trash can" img. |
 
 </details>
 
