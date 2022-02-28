@@ -1,17 +1,18 @@
 import { editDescription } from './edit-description.js';
 
+/**
+ * Entry point: user interaction. To edit a list item description.
+ * It is called each time the user clicks the "edit" icon.
+ *
+ * @param {Event} event - The event triggered when the user clicks the "edit" icon.
+ *
+ */
+
 export const newDescription = (event) => {
-  /* 
- if (
-    event.target.parentElement.parentElement.children[1].children.length === 2
-  ) {
-    console.log('nope');
-    return;
-  }
-*/
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
-  const indexFu = (par1, par2) => {
+  // check index value for event parent table row element
+  const findTableIndex = (par1, par2) => {
     let sum = 0;
     for (let i = 0; i < par1.children.length; i++) {
       if (par1.children[i].id === par2) {
@@ -20,45 +21,25 @@ export const newDescription = (event) => {
     }
     return sum;
   };
-  const index = (indexFu(table, eventTr) + 2) / 2;
-
+  // compare element index to event index to make sure user clicked edit button element
+  const index = (findTableIndex(table, eventTr) + 2) / 2;
   if (event.target.id !== `edit-${index}`) {
     return;
   }
-
+  // remove event listener
   document
     .getElementById('display')
     .removeEventListener('click', newDescription);
+  // edit and reveal warning message to user
   const warnings = document.getElementById('warnings');
   warnings.innerHTML =
     'please enter a new description and click the pen icon to save';
+  // create and append new description input element to description
   const newDescriptionInput = document.createElement('input');
-  // console.log(newDescriptionInput.innerText);
   newDescriptionInput.id = `new-input-${index}`;
-  // console.log(newDescriptionInput.id);
   newDescriptionInput.placeholder = 'new description';
   const descriptionRow = document.getElementById(`description-row-${index}`);
-  // console.log(descriptionRow.id);
   descriptionRow.appendChild(newDescriptionInput);
+  // add edit-description listener
   document.getElementById('display').addEventListener('click', editDescription);
 };
-
-/*
-  const warnings = document.getElementById('warnings');
-  warnings.innerHTML = 'please enter a new description';
-  const newDescriptionInput = document.createElement('input');
-  newDescriptionInput.id = 'new-input';
-  newDescriptionInput.placeholder = 'new description';
-  warnings.appendChild(newDescriptionInput);
-*/
-// const index = preIndex / 2;
-// console.log(table.id, eventTr.id, index);
-
-// const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
-//   event.target,
-// );
-/* 
-  const indexOfItem = indexOfTarget + 1;
-  const itemTitle =
-    event.target.parentElement.children[indexOfItem].textContent;
-*/

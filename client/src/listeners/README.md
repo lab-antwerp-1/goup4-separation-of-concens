@@ -28,7 +28,7 @@
 
 - remove `img` by `display` id on click
 
-- edit `img` button by `remove-${index}` id on `click`
+- edit `img` button by `edit-${index}` id on `click`
 
 ### note
 

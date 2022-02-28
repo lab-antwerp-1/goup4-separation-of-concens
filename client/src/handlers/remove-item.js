@@ -13,7 +13,7 @@ export const removeListHandler = (event) => {
   // check the event target
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.id;
-  const indexFu = (par1, par2) => {
+  const findTableIndex = (par1, par2) => {
     let sum = 0;
     for (let i = 0; i < par1.children.length; i++) {
       if (par1.children[i].id === par2) {
@@ -22,7 +22,7 @@ export const removeListHandler = (event) => {
     }
     return sum;
   };
-  const index = (indexFu(table, eventTr) + 2) / 2;
+  const index = (findTableIndex(table, eventTr) + 2) / 2;
 
   if (event.target.id !== `remove-${index}`) {
     return;
