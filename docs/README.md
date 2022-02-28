@@ -161,6 +161,8 @@ It is called each time the user clicks the "edit" icon.
 | ----- | ------------------ | --------------------------------------------------------- |
 | event | <code>Event</code> | The event triggered when the user clicks the "edit" icon. |
 
+=======
+
 </details>
 
 <details><summary><a href="../../client/src/handlers/remove-item.js" id="clientsrchandlersremove-itemjs">../client/src/handlers/remove-item.js</a></summary>
