@@ -33,10 +33,12 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
   const tEl = document.createElement('table');
   tEl.id = 'display-table';
   // for loop to index array values
+  tEl.classList.add('table');
   for (let i = 0; i < itemToRender.length; i++) {
     const index = i + 1;
     // declare and index id table elements
     const itemTrEl = document.createElement('tr');
+    itemTrEl.classList.add('row');
     const itemTdEl = document.createElement('td');
     itemTrEl.id = `item-row-${index}`;
     itemTdEl.id = `item-td-${index}`;

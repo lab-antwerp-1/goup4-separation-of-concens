@@ -1,0 +1,137 @@
+/* page body */
+
+body {
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  min-width: 180px;
+  font-family: sans-serif, monospace, monda;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-image: url('../public/bg.png');
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+}
+
+/* intro section */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  font-weight: lighter;
+}
+
+.instructions {
+  font-style: oblique;
+}
+
+/* end of intro section */
+
+/* heading */
+
+.wrap {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.wrap h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 78px;
+  letter-spacing: 0.25em;
+  text-align: center;
+}
+
+/* input section  #to do */
+
+.input-section {
+  font-size: 14px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.area {
+  margin-bottom: 10px;
+  background-color: #a8d2a5;
+  height: 100px;
+  width: 90%;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.title {
+  margin-bottom: 10px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  width: 90%;
+  background-color: #a8d2a5;
+  border: none;
+}
+
+.input-button {
+  margin-bottom: 10px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 4px #ecd4e1;
+  background: linear-gradient(90deg, #a8d2a5 0%, #acd4e1 115.2%);
+  border: none;
+}
+
+.display {
+  display: grid;
+  align-self: center;
+  width: 48%;
+}
+
+.row {
+  width: 100%;
+}
+
+/* end of display section */
+
+/* end of page body */
+
+/* footer */
+
+.footer {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  background-color: #acd4e1e1;
+  padding: 20px;
+  width: 50%;
+  z-index: 1030;
+  bottom: 0;
+  position: absolute;
+}
+
+/* .help,
+.share,
+.sort,
+.format,
+.reset {
+  padding: 4.6%;
+} */

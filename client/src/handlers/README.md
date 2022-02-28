@@ -15,7 +15,7 @@
 - It is called each time the user clicks the "add" button.
 - It `import` from:
   - data.js
-  - /components/render-list.js
+  - /components/render-table.js
 - It `export` to listeners `input-items.js`
 
 ### getInputWithEnterHandler
@@ -24,7 +24,7 @@
 - It is called each time the user press the "Enter" key.
 - It `import` from:
   - data.js
-  - /components/render-list.js
+  - /components/render-table.js
 - It `export` to listeners `input-items.js`
 
 ### removeListHandler
@@ -176,3 +176,15 @@ reference 4 does not work
 // reference 5 works
 // const newDescription = prompt('please enter new description');
 ```
+=======
+  - /components/render-table.js
+- It `export` to listeners `remove-list.js`
+
+# removeAllListHandler
+
+- Entry point: user interaction. To remove the entire list.
+- It is called each time the user clicks the "trash can" img at the bottom.
+- It`import` from:
+  - data.js
+  - /components/render-table.js
+- It `export` to listeners `remove-list.js`
