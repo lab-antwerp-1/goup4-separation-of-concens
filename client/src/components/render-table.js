@@ -37,11 +37,21 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
   for (let i = 0; i < itemToRender.length; i++) {
     const index = i + 1;
     // declare and index id table elements
+    const checkEl = document.createElement('label');
+    checkEl.className = 'check';
+    const checkInEl = document.createElement('input');
+    checkInEl.type = 'checkbox';
+    checkInEl.className = 'check-in';
+    const checkIconEl = document.createElement('span');
+    checkIconEl.className = 'check-icon';
+    checkEl.appendChild(checkInEl);
+    checkEl.appendChild(checkIconEl);
     const itemTrEl = document.createElement('tr');
     itemTrEl.classList.add('row');
     const itemTdEl = document.createElement('td');
     itemTrEl.id = `item-row-${index}`;
     itemTdEl.id = `item-td-${index}`;
+    itemTdEl.classList.add('item-td');
     const removeImgEl = document.createElement('img');
     removeImgEl.src = 'client/public/trash-2.png';
     removeImgEl.id = `remove-${index}`;
@@ -56,6 +66,7 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     itemTdEl.innerText = itemToRender[i];
     // append images and table elements to table
     descriptionTrEl.appendChild(descriptionTdEl);
+    itemTrEl.appendChild(checkEl);
     itemTrEl.appendChild(itemTdEl);
     itemTrEl.appendChild(editImgEl);
     itemTrEl.appendChild(removeImgEl);

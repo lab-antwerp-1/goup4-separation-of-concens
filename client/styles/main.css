@@ -107,6 +107,29 @@ body {
   margin-bottom: 6rem;
 }
 
+.check {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.check-in {
+  display: none;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url('../public/unchecked.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.check input:checked + .check-icon {
+  background-image: url('../public/checked.png');
+}
+
 .row {
   width: 100%;
 }
