@@ -6,6 +6,7 @@
 - _removeListHandler_ from _remove-items.js_
 - _newDescription_ from _new-description.js_
 - _editDescription_ from _edit-description.js_
+- _helpSection_ from _help-section.js_
 
 ## description
 
@@ -67,6 +68,18 @@
 > function then adds the `new-description` listener.
 
 - `export` to `new-description` listener,
+
+### helpSection
+
+- Entry point: user interaction. To reveal or hide page instructions.
+
+- Function is called on user click `help` button `img`.
+
+> Function reveals and hides user instructions for the page.
+> When the function is called it first checks if user clicked the correct `img` button through the `help` id.
+> The function then checks the `intro` div for children element numbers. If there is one children element the function will create and append a `p` element with the user instructions to reveal to the user. If the `intro` section has two children elements the `p` instructions element is removed from the parent element.
+
+- `export` to `help-section.js` listener.
 
 ## references
 
@@ -176,8 +189,10 @@ reference 4 does not work
 // reference 5 works
 // const newDescription = prompt('please enter new description');
 ```
+
 =======
-  - /components/render-table.js
+
+- /components/render-table.js
 - It `export` to listeners `remove-list.js`
 
 # removeAllListHandler

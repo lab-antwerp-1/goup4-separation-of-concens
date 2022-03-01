@@ -4,6 +4,7 @@
 - _remove-list.js_
 - _new-description.js_
 - _edit-description.js_
+- _help-section.js_
 
 ## description
 
@@ -20,6 +21,8 @@
 
 - _newDescription_ handler
 - _editDescription_ handler
+
+- _help-section_ handler
 
 ### html target elements
 

@@ -66,7 +66,7 @@
 
 - [ ] use `.intro` class to stylize greeting/instructions
 
-- this will be developed on the branch `1-intro-instructions`.
+- this will be developed on the branch `instructions-section`.
 
 2 - list form
 

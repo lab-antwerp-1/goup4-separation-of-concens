@@ -6,6 +6,7 @@ import { data } from '../../data.js';
 import '../listeners/input-items.js';
 import '../listeners/remove-list.js';
 import '../listeners/edit-description.js';
+import '../listeners/help-section.js';
 
 // render list table
 
