@@ -9,6 +9,7 @@
 - _input-items listener_
 - _remove-list listener_
 - _edit-description listener_
+- _help-section listener_
 
 - _data object_
 - _renderTable component_
