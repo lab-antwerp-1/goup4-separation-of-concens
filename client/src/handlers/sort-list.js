@@ -33,3 +33,12 @@ export const showSort = (event) => {
     displayEl.insertBefore(sortContainer, tEl);
   }
 };
+
+export const tableSort = (event) => {
+  if (event.target.id !== 'sort-select') {
+    return;
+  }
+  const displayEl = document.getElementById('display');
+  displayEl.removeChild(displayEl.children[0]);
+  console.log(event.target.value);
+};
