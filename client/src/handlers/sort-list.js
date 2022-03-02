@@ -24,11 +24,12 @@ export const showSort = (event) => {
   sortContainer.appendChild(sortLabel);
   sortContainer.appendChild(sortSelect);
 
-  if (displayEl.children.length === 1) {
-    displayEl.insertBefore(sortContainer, tEl);
-    return;
-  }
   if (displayEl.children.length === 2) {
     displayEl.removeChild(displayEl.children[0]);
+    return;
+  }
+
+  if (displayEl.children[0].children.length !== 0) {
+    displayEl.insertBefore(sortContainer, tEl);
   }
 };
