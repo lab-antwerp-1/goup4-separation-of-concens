@@ -10,7 +10,7 @@ import '../listeners/help-section.js';
 
 // render list table
 
-const newTable = renderTable(Object.keys(data));
+const newTable = renderTable(Object.keys(data), Object.values(data));
 
 const listContainer = document.getElementById('display');
 listContainer.innerHTML = '';
