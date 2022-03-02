@@ -32,6 +32,18 @@ body {
 
 .instructions {
   font-style: oblique;
+  z-index: 10;
+  padding: 30px;
+  background-color:rgba(122, 157, 119, 0.9);
+  box-shadow: 2px 4px 4px #647980;
+  opacity: 100%;
+  top: 20%;
+  position: absolute;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+  line-height: 30px;
+  
 }
 
 /* end of intro section */
@@ -98,7 +110,18 @@ body {
   box-shadow: 2px 4px 4px #ecd4e1;
   background: linear-gradient(90deg, #a8d2a5 0%, #acd4e1 115.2%);
   border: none;
+  cursor: pointer;
+
 }
+.input-button:hover{
+  outline: solid 2px #647980;
+}
+
+.input-button:active{
+  color: #e0e7e9;
+  background: linear-gradient(90deg, #8fb38c 0%, #89a8b3 115.2%);
+}
+
 
 .display {
   display: grid;
@@ -143,6 +166,23 @@ body {
   width: 100%;
 }
 
+.edit-btn, .delete-btn{
+padding: 2px;
+  
+}
+.edit-btn:hover{
+  background-color: #a8d2a5;
+  border-radius: 2px;
+  outline: solid 2px #647980;
+  cursor: pointer;
+}
+
+.delete-btn:hover{
+  background-color: #a8d2a5;
+  border-radius: 2px;
+  outline: solid 2px #647980;
+  cursor: pointer;
+}
 /* end of display section */
 
 /* end of page body */
