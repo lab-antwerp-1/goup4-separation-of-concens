@@ -106,6 +106,15 @@ body {
   width: 48%;
   margin-bottom: 6rem;
 }
+.warning{
+  width: 40%;
+  color: red;
+  display: flex;
+  align-self: center;
+  /* text-align: center; */
+  padding-bottom: 20px;
+  
+}
 
 .check {
   width: 40px;
