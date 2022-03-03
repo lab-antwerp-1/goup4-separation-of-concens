@@ -1,3 +1,7 @@
+import { renderTable } from '../components/render-table.js';
+import { data } from '../../data.js';
+import { tableSorter } from '../logic/table-sorter.js';
+
 export const showSort = (event) => {
   if (event.target.id !== 'sort') {
     return;
@@ -39,6 +43,9 @@ export const tableSort = (event) => {
     return;
   }
   const displayEl = document.getElementById('display');
-  displayEl.removeChild(displayEl.children[0]);
-  console.log(event.target.value);
+  displayEl.innerHTML = '';
+  const sortType = event.target.value;
+  const sorted = tableSorter(Object.keys(data), sortType);
+  const newTable = renderTable(sorted, Object.values(data));
+  displayEl.appendChild(newTable);
 };
