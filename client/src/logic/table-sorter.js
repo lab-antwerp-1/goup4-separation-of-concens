@@ -3,7 +3,7 @@
  * It does not modify the argument (no side-effects).
  *
  * @param {string[]} [toSort=[]] - The array of strings to sort.
- * @param {string} [sortType='new'] - How to sort the strings, 6 options.
+ * @param {string} [sortType='-'] - How to sort the strings, 6 options.
  * - old: from oldest to newest.
  * - new: from newest to oldest.
  * - short: from shortest to longest.
@@ -20,7 +20,7 @@
  * // [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
  */
 
-export const tableSorter = (toSort = [], sortType = '') => {
+export const tableSorter = (toSort = [], sortType = '-') => {
   const tempArray = [...toSort];
 
   const sortLength = (par1, par2) => {
@@ -45,6 +45,9 @@ export const tableSorter = (toSort = [], sortType = '') => {
   }
   if (sortType === 'long') {
     return tempArray.sort(sortLength).reverse();
+  }
+  if (sortType === 'new') {
+    return tempArray;
   }
   return tempArray;
 };
