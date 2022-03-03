@@ -55,6 +55,7 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     const removeImgEl = document.createElement('img');
     removeImgEl.src = 'client/public/trash-2.png';
     removeImgEl.id = `remove-${index}`;
+    removeImgEl.className = 'delete-btn';
     const descriptionTrEl = document.createElement('tr');
     const descriptionTdEl = document.createElement('td');
     descriptionTrEl.id = `description-row-${index}`;
@@ -62,6 +63,9 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     const editImgEl = document.createElement('img');
     editImgEl.src = 'client/public/description-edit-3.png';
     editImgEl.id = `edit-${index}`;
+    editImgEl.className = 'edit-btn';
+    // editImgEl.width = '20';
+    // editImgEl.height = '20';
     descriptionTdEl.innerText = descriptionToRender[i];
     itemTdEl.innerText = itemToRender[i];
     // append images and table elements to table
