@@ -20,7 +20,7 @@ export const showSort = (event) => {
   const sortSelect = document.createElement('select');
   sortSelect.id = 'sort-select';
   sortSelect.innerHTML = `
-  <option value="-">--Choose Sorting Option--</option>
+  <option value="-">Choose Sorting Method</option>
   <option value="new">First to Last</option>
   <option value="old">Last to First</option>
   <option value="a">Alphabetical</option>
