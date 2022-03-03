@@ -32,9 +32,7 @@ export const newDescription = (event) => {
     .removeEventListener('click', newDescription);
   // edit and reveal warning message to user
   const warnings = document.getElementById('warnings');
-  warnings.innerHTML =
-  'please enter a new description and click the pen icon to save';
-   
+  warnings.innerHTML = 'please enter a new description and click the pen icon to save';
   // create and append new description input element to description
   const newDescriptionInput = document.createElement('input');
   newDescriptionInput.id = `new-input-${index}`;
