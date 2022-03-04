@@ -21,8 +21,8 @@ export const showSort = (event) => {
   sortSelect.id = 'sort-select';
   sortSelect.innerHTML = `
   <option value="-">Choose Sorting Method</option>
-  <option value="new">First to Last</option>
-  <option value="old">Last to First</option>
+  <option value="new">Last to First</option>
+  <option value="old">First to Last</option>
   <option value="a">Alphabetical</option>
   <option value="z">Reverse Alphabetical</option>
   <option value="short">Length</option>
