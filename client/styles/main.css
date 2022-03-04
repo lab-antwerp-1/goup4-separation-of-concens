@@ -128,10 +128,6 @@ body {
   margin-bottom: 6rem;
 }
 
-/* .edit-btn path {
-  stroke: red;
-} */
-
 .warning {
   width: 40%;
   color: red;
@@ -229,11 +225,3 @@ body {
 .reset-btn:active path {
   stroke: #156b2d;
 }
-
-/* .help,
-.share,
-.sort,
-.format,
-.reset {
-  padding: 4.6%;
-} */
