@@ -1,15 +1,17 @@
 # Logic
 
-## arrayOfListItems
+## tableSorter
 
-- `arrayOfListItems` convert user input list items to an array of list items.
+> `tableSorter` sorts list items inputted by the user according to different sorting parameters.
 
-- It `export` to handler `input-items.js`
+- Function `export` to handler `sort-list.js`
 
 ### reference
 
 ```js
 /*
+table sorter reference
+
 export const sortStrings = (toSort = [], sortType = 'oldest') => {
     const tempArray = [...toSort];
   

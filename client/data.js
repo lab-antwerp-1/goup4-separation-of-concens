@@ -1,12 +1,7 @@
-export const data = {};
-
-/*
 /**
- * @property {string[]} words - An array of words that the user has provided.
- * @property {string} sort - A string indicating the order string should be displayed in the UI.
- export const data = {
-    words: [],
-    sort: 'oldest',
-  };
+ * @property {string} keys - A key is assigned for every list item the user inputs and displayed to the user.
+ * @property {string} values - A description inputted for each list item by the user and displayed.
+ *
+ */
 
-  */
+export const data = {};
