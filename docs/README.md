@@ -306,6 +306,17 @@ It does not modify the argument (no side-effects).
 
 <details><summary><a href="../../client/data.js" id="clientdatajs">../client/data.js</a></summary>
 
+<a name="data"></a>
+
+## data
+
+**Properties**
+
+| Name   | Type                | Description                                                                      |
+| ------ | ------------------- | -------------------------------------------------------------------------------- |
+| keys   | <code>string</code> | A key is assigned for every list item the user inputs and displayed to the user. |
+| values | <code>string</code> | A description inputted for each list item by the user and displayed.             |
+
 </details>
 
 <!-- END DOCS -->
