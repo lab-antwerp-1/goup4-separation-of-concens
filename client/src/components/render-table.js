@@ -64,8 +64,6 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     editImgEl.src = 'client/public/description-edit-3.png';
     editImgEl.id = `edit-${index}`;
     editImgEl.className = 'edit-btn';
-    // editImgEl.width = '20';
-    // editImgEl.height = '20';
     descriptionTdEl.innerText = descriptionToRender[i];
     itemTdEl.innerText = itemToRender[i];
     // append images and table elements to table
