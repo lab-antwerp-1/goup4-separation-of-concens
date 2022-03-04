@@ -206,18 +206,29 @@ body {
   position: fixed;
 }
 
-/* .help-btn path {
+.help-btn:hover path {
   stroke: red;
 }
-/*
 
-.sort-btn path {
-  stroke: red;
-} */
+.help-btn:active path {
+  stroke: blue;
+}
 
-/* .reset-btn path {
+.sort-btn:hover path {
   stroke: red;
-} */
+}
+
+.sort-btn:active path {
+  stroke: blue;
+}
+
+.reset-btn:hover path {
+  stroke: red;
+}
+
+.reset-btn:active path {
+  stroke: blue;
+}
 
 /* .help,
 .share,
