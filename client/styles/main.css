@@ -207,27 +207,27 @@ body {
 }
 
 .help-btn:hover path {
-  stroke: red;
+  stroke: #8eaab2;
 }
 
 .help-btn:active path {
-  stroke: blue;
+  stroke: #156b2d;
 }
 
 .sort-btn:hover path {
-  stroke: red;
+  stroke: #8eaab2;
 }
 
 .sort-btn:active path {
-  stroke: blue;
+  stroke: #156b2d;
 }
 
 .reset-btn:hover path {
-  stroke: red;
+  stroke: #8eaab2;
 }
 
 .reset-btn:active path {
-  stroke: blue;
+  stroke: #156b2d;
 }
 
 /* .help,
