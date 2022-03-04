@@ -128,10 +128,6 @@ body {
   margin-bottom: 6rem;
 }
 
-/* .edit-btn path {
-  stroke: red;
-} */
-
 .warning {
   width: 40%;
   color: red;
@@ -206,23 +202,26 @@ body {
   position: fixed;
 }
 
-/* .help-btn path {
-  stroke: red;
+.help-btn:hover path {
+  stroke: #8eaab2;
 }
-/*
 
-.sort-btn path {
-  stroke: red;
-} */
+.help-btn:active path {
+  stroke: #156b2d;
+}
 
-/* .reset-btn path {
-  stroke: red;
-} */
+.sort-btn:hover path {
+  stroke: #8eaab2;
+}
 
-/* .help,
-.share,
-.sort,
-.format,
-.reset {
-  padding: 4.6%;
-} */
+.sort-btn:active path {
+  stroke: #156b2d;
+}
+
+.reset-btn:hover path {
+  stroke: #8eaab2;
+}
+
+.reset-btn:active path {
+  stroke: #156b2d;
+}

@@ -34,7 +34,6 @@
     - [remove-list.js](#clientsrclistenersremove-listjs)
     - [sort-list.js](#clientsrclistenerssort-listjs)
   - logic
-    - [array-list.js](#clientsrclogicarray-listjs)
     - [table-sorter.js](#clientsrclogictable-sorterjs)
 - styles
 - [data.js](#clientdatajs)
@@ -250,22 +249,6 @@ It is called each time the user clicks the "trash can" img.
 
 ## /logic
 
-<details><summary><a href="../../client/src/logic/array-list.js" id="clientsrclogicarray-listjs">../client/src/logic/array-list.js</a></summary>
-
-<a name="arrayOfListItems"></a>
-
-## arrayOfListItems ⇒ <code>Array</code>
-
-Convert user input list items to an array of list items.
-
-**Returns**: <code>Array</code> - - An array of list.
-
-| Param       | Type                | Default                                 | Description                                    |
-| ----------- | ------------------- | --------------------------------------- | ---------------------------------------------- |
-| [listItems] | <code>string</code> | <code>&quot;\&quot;\&quot;&quot;</code> | A string of list that user are going to input. |
-
-</details>
-
 <details><summary><a href="../../client/src/logic/table-sorter.js" id="clientsrclogictable-sorterjs">../client/src/logic/table-sorter.js</a></summary>
 
 <a name="tableSorter"></a>
@@ -305,6 +288,17 @@ It does not modify the argument (no side-effects).
 ---
 
 <details><summary><a href="../../client/data.js" id="clientdatajs">../client/data.js</a></summary>
+
+<a name="data"></a>
+
+## data
+
+**Properties**
+
+| Name   | Type                | Description                                                                      |
+| ------ | ------------------- | -------------------------------------------------------------------------------- |
+| keys   | <code>string</code> | A key is assigned for every list item the user inputs and displayed to the user. |
+| values | <code>string</code> | A description inputted for each list item by the user and displayed.             |
 
 </details>
 

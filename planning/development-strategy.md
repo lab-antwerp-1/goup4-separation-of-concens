@@ -68,6 +68,10 @@
 
 - this will be developed on the branch `instructions-section`.
 
+  `type: js`
+
+- use `help` id for button `eventListener` and handler functions
+
 2 - list form
 
 > A user can add new items to their list
@@ -80,13 +84,13 @@
 
 `type: css`
 
-- [ ] use `.input` class to stylize input section
+- [ ] use `.input-section` class to stylize input section
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
+- [ ] use `add` and `input-area` ids for `addEventListener` listeners
 - [ ] use `getElementById` and `.appendChild` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `if` conditional for component function
 
 - this will be developed on the branch `2-input-add`.
 
@@ -98,7 +102,7 @@
 
 `type: html`
 
-- [ ] use `table` and `td` for list display
+- [ ] use `table`, `tr` and `td` for list display
 
 `type: css`
 
@@ -106,8 +110,8 @@
 
 `type: js`
 
-- [ ] use `if` conditional for handler
-- [ ] use `createElement` and `appendChild` for component
+- [ ] use `display-table` id for `table` element
+- [ ] use `if` conditional, `createElement` and `appendChild` for component function
 
 - this will be developed on the branch `3-list-display`.
 
@@ -119,17 +123,18 @@
 
 `type: html`
 
-- [ ] use `button` for remove button
+- [ ] use `img` for remove button
 
 `type: css`
 
-- [ ] use `.button` class to stylize button
+- [ ] use `.delete-btn` class to stylize button
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
+- [ ] use `remove-${index}` id for button
+- [ ] use `addEventListener` for listeners
 - [ ] use `getElementById` and `.removeChild` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `if` conditional for component
 
 - this will be developed on the branch `4-remove-button`.
 
@@ -141,7 +146,9 @@
 
 `type: css`
 
-- [ ] use `.button` class to stylize button
+- [ ] use `body` and `.page` class to setup general appearance
+- [ ] use `.wrap` class for main container `div`.
+- [ ] use `flex` display for user view
 
 - this will be developed on the branch `5-css-setup`.
 
@@ -153,17 +160,18 @@
 
 `type: html`
 
-- [ ] use `button` for delete/reset button
+- [ ] use `svg` for delete/reset button
 
 `type: css`
 
-- [ ] use `.button` class to stylize button
+- [ ] use `.reset-btn` class to stylize button
+- [ ] use `:hover` and `:active` to style button interaction
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
-- [ ] use `getElementById` and `.removeChild` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `reset-list` id and `addEventListener` for listener
+- [ ] use `for` loop, `getElementById` and `.removeChild` for handler
+- [ ] use `if` conditional for component
 
 - this will be developed on the branch `6-reset-delete`.
 
@@ -179,17 +187,18 @@
 
 `type: html`
 
-- [ ] use `input` and `button` for description section
+- [ ] use `input` and `img` for description section
 
 `type: css`
 
-- [ ] use `.description` class to stylize section
+- [ ] use `.edit-btn` class to stylize section
+- [ ] use `:hover` and `:active` to style button interaction
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
-- [ ] use `getElementById` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `edit-${index}` and `new-input-${index}` ids and `addEventListener` for listeners
+- [ ] use `getElementById` `if` conditional and `appendChild` for handler
+- [ ] use `if` conditional for component
 
 - this will be developed on the branch `7-description-edit`.
 
@@ -205,13 +214,7 @@
 
 `type: css`
 
-- [ ] use `.checkbox` class to stylize checkbox
-
-`type: js`
-
-- [ ] use `addEventListener` for listener
-- [ ] use `getElementById` for handler
-- [ ] use `if` conditional for logic/component
+- [ ] use `.check`, `.check-in` and `check-icon` classes to stylize checkbox
 
 - this will be developed on the branch `8-checkbox`.
 
@@ -227,12 +230,12 @@
 
 `type: css`
 
-- [ ] use `.sort` class to stylize sort section
+- [ ] use `.sort-list` class to stylize sort section
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
-- [ ] use `getElementById` for handler
+- [ ] use `sort-label` id and `addEventListener` for listener
+- [ ] use `getElementById` `createChild` and `appendChild` for handler
 - [ ] use `if` conditional for logic/component
 
 - this will be developed on the branch `9-sort-dropbox`.
@@ -301,7 +304,7 @@
 
 13 - list formatting
 
-> As a user I want the page to help me avoid empty fields
+> As a user I want the page to help me use it correctly
 
 `type: html`
 
@@ -313,8 +316,8 @@
 
 `type: js`
 
-- [ ] use `addEventListener` for listener
-- [ ] use `for` for handler
+- [ ] use `warnings` id in handlers
 - [ ] use `if` conditional for logic/component
 
-- [ ] _there is a warning when an empty field is left on the list_
+- [ ] _there is a warning when user enters list item without a title_
+- [ ] _there is a warning when user edits an item description_
