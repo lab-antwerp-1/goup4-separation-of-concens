@@ -14,6 +14,7 @@ export const showSort = (event) => {
   sortContainer.id = 'sort-container';
   const sortLabel = document.createElement('label');
   sortLabel.id = 'sort-label';
+  sortLabel.className = 'sort-list';
   sortLabel.for = 'select';
   sortLabel.innerHTML = 'Sort List By:';
 
