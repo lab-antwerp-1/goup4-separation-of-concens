@@ -24,6 +24,7 @@
     - [input-items.js](#clientsrchandlersinput-itemsjs)
     - [new-description.js](#clientsrchandlersnew-descriptionjs)
     - [remove-item.js](#clientsrchandlersremove-itemjs)
+    - [sort-list.js](#clientsrchandlerssort-listjs)
   - init
     - [index.js](#clientsrcinitindexjs)
   - listeners
@@ -31,8 +32,10 @@
     - [help-section.js](#clientsrclistenershelp-sectionjs)
     - [input-items.js](#clientsrclistenersinput-itemsjs)
     - [remove-list.js](#clientsrclistenersremove-listjs)
+    - [sort-list.js](#clientsrclistenerssort-listjs)
   - logic
     - [array-list.js](#clientsrclogicarray-listjs)
+    - [table-sorter.js](#clientsrclogictable-sorterjs)
 - styles
 - [data.js](#clientdatajs)
 
@@ -207,6 +210,10 @@ It is called each time the user clicks the "trash can" img.
 
 </details>
 
+<details><summary><a href="../../client/src/handlers/sort-list.js" id="clientsrchandlerssort-listjs">../client/src/handlers/sort-list.js</a></summary>
+
+</details>
+
 ---
 
 ## /init
@@ -235,6 +242,10 @@ It is called each time the user clicks the "trash can" img.
 
 </details>
 
+<details><summary><a href="../../client/src/listeners/sort-list.js" id="clientsrclistenerssort-listjs">../client/src/listeners/sort-list.js</a></summary>
+
+</details>
+
 ---
 
 ## /logic
@@ -252,6 +263,36 @@ Convert user input list items to an array of list items.
 | Param       | Type                | Default                                 | Description                                    |
 | ----------- | ------------------- | --------------------------------------- | ---------------------------------------------- |
 | [listItems] | <code>string</code> | <code>&quot;\&quot;\&quot;&quot;</code> | A string of list that user are going to input. |
+
+</details>
+
+<details><summary><a href="../../client/src/logic/table-sorter.js" id="clientsrclogictable-sorterjs">../client/src/logic/table-sorter.js</a></summary>
+
+<a name="tableSorter"></a>
+
+## tableSorter ⇒ <code>Array.&lt;string&gt;</code>
+
+Sorts an array of strings in different ways.
+It does not modify the argument (no side-effects).
+
+**Returns**: <code>Array.&lt;string&gt;</code> - A new sorted array containing the same strings as toSort.
+
+| Param      | Type                              | Default                                | Description                                                                                                                                                                                                                                                                                                 |
+| ---------- | --------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [toSort]   | <code>Array.&lt;string&gt;</code> | <code>[]</code>                        | The array of strings to sort.                                                                                                                                                                                                                                                                               |
+| [sortType] | <code>string</code>               | <code>&quot;&#x27;-&#x27;&quot;</code> | How to sort the strings, 6 options. - old: from oldest to newest. - new: from newest to oldest. - short: from shortest to longest. - long: from longest to shortest. - a: alphabetical order. - z: reverse alphabetical order. If the sortType is not one of these 6 options, a copy of toSort is returned. |
+
+**Example**
+
+```js
+// [Monday, Tuesday, Wednesday, Thursday], 'short' --> [Monday, Tuesday, Thursday, Wednesday]
+```
+
+**Example**
+
+```js
+// [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
+```
 
 </details>
 

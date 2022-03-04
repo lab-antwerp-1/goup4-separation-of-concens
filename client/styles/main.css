@@ -128,6 +128,10 @@ body {
   margin-bottom: 6rem;
 }
 
+/* .edit-btn path {
+  stroke: red;
+} */
+
 .warning {
   width: 40%;
   color: red;
@@ -201,6 +205,19 @@ body {
   bottom: 0;
   position: fixed;
 }
+
+/* .help-btn path {
+  stroke: red;
+}
+/*
+
+.sort-btn path {
+  stroke: red;
+} */
+
+/* .reset-btn path {
+  stroke: red;
+} */
 
 /* .help,
 .share,
