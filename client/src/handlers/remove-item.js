@@ -12,7 +12,7 @@ export const removeListHandler = (event) => {
   // debugger;
   // check the event target
   const table = document.getElementById('display-table');
-  const eventTr = event.target.parentElement.id;
+  const eventTr = event.target.parentElement.parentElement.id;
   const findTableIndex = (par1, par2) => {
     let sum = 0;
     for (let i = 0; i < par1.children.length; i++) {
@@ -28,6 +28,10 @@ export const removeListHandler = (event) => {
     return;
   }
 
+  const toRemove = document.getElementById(eventTr);
+  console.log('yep', eventTr, event.target.id, toRemove.id);
+
+  /*
   // process user input, and get component index.
   const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
     event.target,
@@ -44,6 +48,7 @@ export const removeListHandler = (event) => {
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
   listContainer.appendChild(newTable);
+  */
 };
 
 /**
