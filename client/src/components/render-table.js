@@ -80,6 +80,12 @@ export const renderTable = (itemToRender = [], descriptionToRender = []) => {
     editImgEl.src = 'client/public/description-edit-3.png';
     editImgEl.id = `edit-${index}`;
     editImgEl.className = 'edit-btn';
+    /*
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.0052 16.6667H17.5052" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.7552 2.91666C14.0868 2.58514 14.5364 2.3989 15.0052 2.3989C15.2374 2.3989 15.4673 2.44462 15.6817 2.53346C15.8962 2.6223 16.0911 2.75251 16.2552 2.91666C16.4194 3.08081 16.5496 3.27569 16.6385 3.49017C16.7273 3.70464 16.773 3.93452 16.773 4.16666C16.773 4.39881 16.7273 4.62868 16.6385 4.84316C16.5496 5.05763 16.4194 5.25251 16.2552 5.41666L5.83858 15.8333L2.50525 16.6667L3.33858 13.3333L13.7552 2.91666Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+*/
     // editImgEl.width = '20';
     // editImgEl.height = '20';
     descriptionTdEl.innerText = descriptionToRender[i];
