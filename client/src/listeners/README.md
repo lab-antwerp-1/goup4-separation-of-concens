@@ -5,6 +5,7 @@
 - _new-description.js_
 - _edit-description.js_
 - _help-section.js_
+- _sort-list.js_
 
 ## description
 
@@ -23,6 +24,7 @@
 - _editDescription_ handler
 
 - _help-section_ handler
+- _sort-list_ handler
 
 ### html target elements
 
@@ -32,6 +34,9 @@
 - remove `img` by `display` id on click
 
 - edit `img` button by `edit-${index}` id on `click`
+
+- `sort` id `i` and `svg` element on `click`
+- `sort-select` id `select` element on `change`
 
 ### note
 
