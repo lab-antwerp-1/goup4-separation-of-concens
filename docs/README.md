@@ -114,6 +114,17 @@ It is called each time the user clicks the "edit" icon.
 
 <details><summary><a href="../../client/src/handlers/help-section.js" id="clientsrchandlershelp-sectionjs">../client/src/handlers/help-section.js</a></summary>
 
+<a name="helpSection"></a>
+
+## helpSection
+
+Entry point: user interaction. To edit a list item description.
+It is called each time the user clicks the "help/instructions" icon on footer.
+
+| Param | Type               | Description                                                            |
+| ----- | ------------------ | ---------------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "help/instructions" icon. |
+
 </details>
 
 <details><summary><a href="../../client/src/handlers/input-items.js" id="clientsrchandlersinput-itemsjs">../client/src/handlers/input-items.js</a></summary>
@@ -210,6 +221,41 @@ It is called each time the user clicks the "trash can" img.
 </details>
 
 <details><summary><a href="../../client/src/handlers/sort-list.js" id="clientsrchandlerssort-listjs">../client/src/handlers/sort-list.js</a></summary>
+
+## Constants
+
+<dl>
+<dt><a href="#showSort">showSort</a></dt>
+<dd><p>Entry point: user interaction. To reveal list sorting options.
+It is called each time the user clicks the &quot;sort list&quot; icon on footer.</p>
+</dd>
+<dt><a href="#tableSort">tableSort</a></dt>
+<dd><p>Entry point: user interaction. To arrange list items according to user selection.
+It is called each time the user makes a choice in the &quot;sort list&quot; select element.</p>
+</dd>
+</dl>
+
+<a name="showSort"></a>
+
+## showSort
+
+Entry point: user interaction. To reveal list sorting options.
+It is called each time the user clicks the "sort list" icon on footer.
+
+| Param | Type               | Description                                                    |
+| ----- | ------------------ | -------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "sort list" icon. |
+
+<a name="tableSort"></a>
+
+## tableSort
+
+Entry point: user interaction. To arrange list items according to user selection.
+It is called each time the user makes a choice in the "sort list" select element.
+
+| Param | Type               | Description                                                                  |
+| ----- | ------------------ | ---------------------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user makes a selection in the "select" element. |
 
 </details>
 

@@ -21,16 +21,20 @@
  */
 
 export const tableSorter = (toSort = [], sortType = '-') => {
+  // create array copy of array to sort
   const tempArray = [...toSort];
 
+  // create function for comparing value length
   const sortLength = (par1, par2) => {
     return par1.length - par2.length;
   };
 
+  // create function to compare value alphabetical order
   const sortCase = (par1, par2) => {
     return par1.localeCompare(par2);
   };
 
+  // if conditional for sorting array according to sort option parameter
   if (sortType === 'old') {
     return tempArray.reverse();
   }
