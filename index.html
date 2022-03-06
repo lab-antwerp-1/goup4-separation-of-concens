@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>List Maker</title>
   <link href="./client/styles/index.css" rel="stylesheet" />
-  <!-- <link href="./client/styles/bootstrap.css" rel="stylesheet" /> -->
 </head>
 
 <body>
@@ -33,16 +32,18 @@
       <!-- end of input section -->
 
       <!-- display section -->
-      <!-- <div class="todo-items"> -->
         <div id="display" class="display"></div>
-      <!-- </div> -->
       <!-- end of display section -->
 
       <!-- footer -->
         <footer class="footer" id="footer">
           <i class="help">
-            <img id="help" src="./client/public/alert-circle.png">
-          </i>
+            <svg id="help" class="help-btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 8V12" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 16H12.01" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>              
+            </i> 
           <i class="share">
             <img src="./client/public/share-2.png">
           </i>
@@ -50,11 +51,24 @@
             <img src="./client/public/format-icon.png">
           </i>
           <i class="sort">
-            <img src="./client/public/sort-icon.png">
-          </i>
+            <svg id="sort" class="sort-btn" width="29" height="24" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.2273 2L27 2" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.40909 2V19.7778" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.2273 8.66669L23.5909 8.66669" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.2273 15.3333L20.1818 15.3333" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.2273 22H16.7727" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.40909 22L8.62321 16.2444" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5.21413 22L2.00001 16.2444" stroke="#3E3B3B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </i>
           <i class="reset">
-            <img src="./client/public/trash-gry.png" id="reset-list">
-          </i>
+            <svg id="reset-list" class="reset-btn" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.125 6.25H5.20833H21.875" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.33333 6.24999V4.16666C8.33333 3.61413 8.55282 3.08422 8.94352 2.69352C9.33422 2.30282 9.86413 2.08333 10.4167 2.08333H14.5833C15.1359 2.08333 15.6658 2.30282 16.0565 2.69352C16.4472 3.08422 16.6667 3.61413 16.6667 4.16666V6.24999M19.7917 6.24999V20.8333C19.7917 21.3859 19.5722 21.9158 19.1815 22.3065C18.7908 22.6972 18.2609 22.9167 17.7083 22.9167H7.29166C6.73913 22.9167 6.20922 22.6972 5.81852 22.3065C5.42782 21.9158 5.20833 21.3859 5.20833 20.8333V6.24999H19.7917Z" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.4167 11.4583V17.7083" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.5833 11.4583V17.7083" stroke="#3E3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>              
+            </i>
         </footer>
     </div>
   </div>

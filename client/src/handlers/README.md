@@ -7,6 +7,8 @@
 - _newDescription_ from _new-description.js_
 - _editDescription_ from _edit-description.js_
 - _helpSection_ from _help-section.js_
+- _showSort_ from _sort-list.js_
+- _tableSort_ from _sort-list.js_
 
 ## description
 
@@ -36,6 +38,18 @@
   - data.js
   - /components/render-list.js
 - It `export` to listeners `input-items.js`
+
+- /components/render-table.js
+- It `export` to listeners `remove-list.js`
+
+# removeAllListHandler
+
+- Entry point: user interaction. To remove the entire list.
+- It is called each time the user clicks the "trash can" img at the bottom.
+- It`import` from:
+  - data.js
+  - /components/render-table.js
+- It `export` to listeners `remove-list.js`
 
 ### newDescription
 
@@ -67,19 +81,44 @@
 > function then updates the data `table` item object and renders the updated list to the user with the `render-table.js` component function.
 > function then adds the `new-description` listener.
 
-- `export` to `new-description` listener,
+- `export` to `new-description.js` listener,
 
 ### helpSection
 
 - Entry point: user interaction. To reveal or hide page instructions.
 
-- Function is called on user click `help` button `img`.
+- Function is called on user click `help` button `svg`.
 
 > Function reveals and hides user instructions for the page.
-> When the function is called it first checks if user clicked the correct `img` button through the `help` id.
+> When the function is called it first checks if user clicked the correct `svg` button through the `help` id.
 > The function then checks the `intro` div for children element numbers. If there is one children element the function will create and append a `p` element with the user instructions to reveal to the user. If the `intro` section has two children elements the `p` instructions element is removed from the parent element.
 
-- `export` to `help-section.js` listener.
+- `export` to `table-section.js` listener.
+
+### showSort
+
+- Entry point: user interaction. To reveal or hide list sorting options.
+
+- Function is called on user click `sort` button `svg`.
+
+> Function reveals or hide list sorting options.
+> When the function is called it first checks if user clicked the correct `svg` button through the `sort` id.
+> The function then checks the `sort-container` div for children element numbers. If there is one children element the function will create and append a `p` element with the user instructions to reveal to the user. If the `sort-container` section has two children elements the `p` instructions element is removed from the parent element.
+
+- `export` to `sort-list.js` listener.
+
+### tableSort
+
+- Entry point: user interaction. To select list sorting option.
+
+- Function is called on user `change` of `select` `sort-select` id element.
+
+> Function applies user sorting selection to item list, then renders and displays amended list back to user.
+> When the function is called it first checks if user clicked the correct `select` element through the `sort-select` id.
+> Function then calls the `tableSorter` logic to amend the item order in the `data` element according to user selection. It then renders the new list and displays it the user using the `renderTable` component.
+
+- `import` from `render-table.js` component, `table-sorter.js` logic and `data.js`.
+- `export` to `sort-list.js` listener.
 
 ## references
 
@@ -189,17 +228,3 @@ reference 4 does not work
 // reference 5 works
 // const newDescription = prompt('please enter new description');
 ```
-
-=======
-
-- /components/render-table.js
-- It `export` to listeners `remove-list.js`
-
-# removeAllListHandler
-
-- Entry point: user interaction. To remove the entire list.
-- It is called each time the user clicks the "trash can" img at the bottom.
-- It`import` from:
-  - data.js
-  - /components/render-table.js
-- It `export` to listeners `remove-list.js`

@@ -9,7 +9,6 @@ import { renderTable } from '../components/render-table.js';
  */
 
 export const removeListHandler = (event) => {
-  // debugger;
   // check the event target
   const table = document.getElementById('display-table');
   const eventTr = event.target.parentElement.parentElement.id;
@@ -58,7 +57,6 @@ export const removeListHandler = (event) => {
  */
 
 export const removeAllListHandler = (event) => {
-  // debugger;
   // check the event target
   if (event.target.id !== 'reset-list') {
     return;

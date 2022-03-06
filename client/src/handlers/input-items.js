@@ -10,7 +10,6 @@ import { renderTable } from '../components/render-table.js';
 
 export const getInputHandler = (event) => {
   /* -- entry point for adding a list -- */
-  // debugger;
   /* -- check the target -- */
   if (event.target.type !== 'button') {
     return;
@@ -38,10 +37,6 @@ export const getInputHandler = (event) => {
 
   /* -- render new words -- */
 
-  /*  
-  const toRender = Object.keys(data);
-  const newList = renderList(toRender);
-*/
   const itemToRender = Object.keys(data);
   const descriptionToRender = Object.values(data);
   const newTable = renderTable(itemToRender, descriptionToRender);
@@ -60,7 +55,6 @@ export const getInputHandler = (event) => {
 
 export const getInputWithEnterHandler = (event) => {
   /* -- entry point for adding a list -- */
-  // debugger;
 
   /* -- check the target -- */
   if (
@@ -97,10 +91,7 @@ export const getInputWithEnterHandler = (event) => {
   // document.getElementById('input-area').text.placeholder = 'Enter new title';    // works, but it's kind of confusing with edit
   // document.getElementById('description').placeholder = 'Enter new description:';   // works, but it's kind of confusing with edit
   /* -- render new words -- */
-  /*  
-  const toRender = Object.keys(data);
-  const newList = renderTable(toRender);
-*/
+
   const itemToRender = Object.keys(data);
   const descriptionToRender = Object.values(data);
   const newTable = renderTable(itemToRender, descriptionToRender);
