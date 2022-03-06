@@ -11,7 +11,7 @@ import { renderTable } from '../components/render-table.js';
 export const removeListHandler = (event) => {
   // check the event target
   const table = document.getElementById('display-table');
-  const eventTr = event.target.parentElement.id;
+  const eventTr = event.target.parentElement.parentElement.id;
   const findTableIndex = (par1, par2) => {
     let sum = 0;
     for (let i = 0; i < par1.children.length; i++) {
@@ -27,12 +27,15 @@ export const removeListHandler = (event) => {
     return;
   }
 
+  // const toRemove = document.getElementById(eventTr);
   // process user input, and get component index.
-  const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
-    event.target,
-  );
+
+  const indexOfTarget = Array.from(
+    event.target.parentElement.parentElement.children,
+  ).indexOf(event.target.parentElement);
   const indexOfTitle = indexOfTarget - 2;
-  const title = event.target.parentElement.children[indexOfTitle].textContent;
+  const title =
+    event.target.parentElement.parentElement.children[indexOfTitle].textContent;
 
   // update state
   delete data[title];

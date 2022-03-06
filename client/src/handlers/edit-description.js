@@ -12,7 +12,7 @@ import { newDescription } from './new-description.js';
 
 export const editDescription = (event) => {
   const table = document.getElementById('display-table');
-  const eventTr = event.target.parentElement.id;
+  const eventTr = event.target.parentElement.parentElement.id;
   // check index value for event parent table row element
   const findTableIndex = (par1, par2) => {
     let sum = 0;
@@ -23,16 +23,19 @@ export const editDescription = (event) => {
     }
     return sum;
   };
+
   // compare element index to event index to make sure user clicked edit button element
   const index = (findTableIndex(table, eventTr) + 2) / 2;
-  const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
-    event.target,
-  );
+  const indexOfTarget = Array.from(
+    event.target.parentElement.parentNode.children,
+  ).indexOf(event.target.parentElement);
+
   const kid = document.getElementById(`description-row-${index}`);
   // add condition to assure button clicked is of the same element as input description box
   if (event.target.id !== `edit-${index}` || kid.children.length !== 2) {
     return;
   }
+
   // remove event listener
   document
     .getElementById('display')
@@ -40,7 +43,8 @@ export const editDescription = (event) => {
   // establish index of description element
   const indexOfItem = indexOfTarget - 1;
   const itemTitle =
-    event.target.parentElement.children[indexOfItem].textContent;
+    event.target.parentElement.parentElement.children[indexOfItem].textContent;
+
   // get warning element and new description input
   const warnings = document.getElementById('warnings');
   const description = document.getElementById(`new-input-${index}`);
@@ -55,6 +59,7 @@ export const editDescription = (event) => {
   listContainer.appendChild(newTable);
   // remove update description warning message
   warnings.innerHTML = '';
+
   // add new-description listener
   document.getElementById('display').addEventListener('click', newDescription);
 };

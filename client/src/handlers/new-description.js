@@ -10,7 +10,7 @@ import { editDescription } from './edit-description.js';
 
 export const newDescription = (event) => {
   const table = document.getElementById('display-table');
-  const eventTr = event.target.parentElement.id;
+  const eventTr = event.target.parentElement.parentElement.parentElement.id;
   // check index value for event parent table row element
   const findTableIndex = (par1, par2) => {
     let sum = 0;
@@ -21,11 +21,14 @@ export const newDescription = (event) => {
     }
     return sum;
   };
+
   // compare element index to event index to make sure user clicked edit button element
   const index = (findTableIndex(table, eventTr) + 2) / 2;
-  if (event.target.id !== `edit-${index}`) {
+  if (event.target.parentElement.id !== `edit-${index}`) {
     return;
   }
+  // console.log('yep', eventTr, index);
+
   // remove event listener
   document
     .getElementById('display')
@@ -41,5 +44,6 @@ export const newDescription = (event) => {
   const descriptionRow = document.getElementById(`description-row-${index}`);
   descriptionRow.appendChild(newDescriptionInput);
   // add edit-description listener
+
   document.getElementById('display').addEventListener('click', editDescription);
 };
