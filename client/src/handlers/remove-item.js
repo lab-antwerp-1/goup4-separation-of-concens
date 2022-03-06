@@ -28,16 +28,15 @@ export const removeListHandler = (event) => {
     return;
   }
 
-  const toRemove = document.getElementById(eventTr);
-  console.log('yep', eventTr, event.target.id, toRemove.id);
-
-  /*
+  // const toRemove = document.getElementById(eventTr);
   // process user input, and get component index.
-  const indexOfTarget = Array.from(event.target.parentNode.children).indexOf(
-    event.target,
-  );
+
+  const indexOfTarget = Array.from(
+    event.target.parentElement.parentElement.children,
+  ).indexOf(event.target.parentElement);
   const indexOfTitle = indexOfTarget - 2;
-  const title = event.target.parentElement.children[indexOfTitle].textContent;
+  const title =
+    event.target.parentElement.parentElement.children[indexOfTitle].textContent;
 
   // update state
   delete data[title];
@@ -48,7 +47,6 @@ export const removeListHandler = (event) => {
   const listContainer = document.getElementById('display');
   listContainer.innerHTML = '';
   listContainer.appendChild(newTable);
-  */
 };
 
 /**
