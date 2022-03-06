@@ -165,12 +165,7 @@ body {
   width: 100%;
 }
 
-.edit-btn {
-  padding: 2px;
-}
-
 .delete-btn {
-  margin-bottom: 2px;
   cursor: pointer;
 }
 
@@ -188,6 +183,7 @@ body {
 }
 
 .edit-btn {
+  margin-right: 4px;
   cursor: pointer;
 }
 
