@@ -173,7 +173,6 @@ body {
   cursor: pointer;
   stroke: #647980;
 }
-
 .delete-btn:hover :nth-child(n) {
   stroke: #bc0808;
 }
