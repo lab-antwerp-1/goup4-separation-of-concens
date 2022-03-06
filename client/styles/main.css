@@ -222,10 +222,26 @@ body {
   position: fixed;
 }
 
-/* .help,
-.share,
-.sort,
-.format,
-.reset {
-  padding: 4.6%;
-} */
+.help-btn:hover path {
+  stroke: #8eaab2;
+}
+
+.help-btn:active path {
+  stroke: #156b2d;
+}
+
+.sort-btn:hover path {
+  stroke: #8eaab2;
+}
+
+.sort-btn:active path {
+  stroke: #156b2d;
+}
+
+.reset-btn:hover path {
+  stroke: #8eaab2;
+}
+
+.reset-btn:active path {
+  stroke: #156b2d;
+}

@@ -24,6 +24,7 @@
     - [input-items.js](#clientsrchandlersinput-itemsjs)
     - [new-description.js](#clientsrchandlersnew-descriptionjs)
     - [remove-item.js](#clientsrchandlersremove-itemjs)
+    - [sort-list.js](#clientsrchandlerssort-listjs)
   - init
     - [index.js](#clientsrcinitindexjs)
   - listeners
@@ -31,8 +32,9 @@
     - [help-section.js](#clientsrclistenershelp-sectionjs)
     - [input-items.js](#clientsrclistenersinput-itemsjs)
     - [remove-list.js](#clientsrclistenersremove-listjs)
+    - [sort-list.js](#clientsrclistenerssort-listjs)
   - logic
-    - [array-list.js](#clientsrclogicarray-listjs)
+    - [table-sorter.js](#clientsrclogictable-sorterjs)
 - styles
 - [data.js](#clientdatajs)
 
@@ -111,6 +113,17 @@ It is called each time the user clicks the "edit" icon.
 </details>
 
 <details><summary><a href="../../client/src/handlers/help-section.js" id="clientsrchandlershelp-sectionjs">../client/src/handlers/help-section.js</a></summary>
+
+<a name="helpSection"></a>
+
+## helpSection
+
+Entry point: user interaction. To edit a list item description.
+It is called each time the user clicks the "help/instructions" icon on footer.
+
+| Param | Type               | Description                                                            |
+| ----- | ------------------ | ---------------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "help/instructions" icon. |
 
 </details>
 
@@ -207,6 +220,45 @@ It is called each time the user clicks the "trash can" img.
 
 </details>
 
+<details><summary><a href="../../client/src/handlers/sort-list.js" id="clientsrchandlerssort-listjs">../client/src/handlers/sort-list.js</a></summary>
+
+## Constants
+
+<dl>
+<dt><a href="#showSort">showSort</a></dt>
+<dd><p>Entry point: user interaction. To reveal list sorting options.
+It is called each time the user clicks the &quot;sort list&quot; icon on footer.</p>
+</dd>
+<dt><a href="#tableSort">tableSort</a></dt>
+<dd><p>Entry point: user interaction. To arrange list items according to user selection.
+It is called each time the user makes a choice in the &quot;sort list&quot; select element.</p>
+</dd>
+</dl>
+
+<a name="showSort"></a>
+
+## showSort
+
+Entry point: user interaction. To reveal list sorting options.
+It is called each time the user clicks the "sort list" icon on footer.
+
+| Param | Type               | Description                                                    |
+| ----- | ------------------ | -------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user clicks the "sort list" icon. |
+
+<a name="tableSort"></a>
+
+## tableSort
+
+Entry point: user interaction. To arrange list items according to user selection.
+It is called each time the user makes a choice in the "sort list" select element.
+
+| Param | Type               | Description                                                                  |
+| ----- | ------------------ | ---------------------------------------------------------------------------- |
+| event | <code>Event</code> | The event triggered when the user makes a selection in the "select" element. |
+
+</details>
+
 ---
 
 ## /init
@@ -235,23 +287,41 @@ It is called each time the user clicks the "trash can" img.
 
 </details>
 
+<details><summary><a href="../../client/src/listeners/sort-list.js" id="clientsrclistenerssort-listjs">../client/src/listeners/sort-list.js</a></summary>
+
+</details>
+
 ---
 
 ## /logic
 
-<details><summary><a href="../../client/src/logic/array-list.js" id="clientsrclogicarray-listjs">../client/src/logic/array-list.js</a></summary>
+<details><summary><a href="../../client/src/logic/table-sorter.js" id="clientsrclogictable-sorterjs">../client/src/logic/table-sorter.js</a></summary>
 
-<a name="arrayOfListItems"></a>
+<a name="tableSorter"></a>
 
-## arrayOfListItems ⇒ <code>Array</code>
+## tableSorter ⇒ <code>Array.&lt;string&gt;</code>
 
-Convert user input list items to an array of list items.
+Sorts an array of strings in different ways.
+It does not modify the argument (no side-effects).
 
-**Returns**: <code>Array</code> - - An array of list.
+**Returns**: <code>Array.&lt;string&gt;</code> - A new sorted array containing the same strings as toSort.
 
-| Param       | Type                | Default                                 | Description                                    |
-| ----------- | ------------------- | --------------------------------------- | ---------------------------------------------- |
-| [listItems] | <code>string</code> | <code>&quot;\&quot;\&quot;&quot;</code> | A string of list that user are going to input. |
+| Param      | Type                              | Default                                | Description                                                                                                                                                                                                                                                                                                 |
+| ---------- | --------------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [toSort]   | <code>Array.&lt;string&gt;</code> | <code>[]</code>                        | The array of strings to sort.                                                                                                                                                                                                                                                                               |
+| [sortType] | <code>string</code>               | <code>&quot;&#x27;-&#x27;&quot;</code> | How to sort the strings, 6 options. - old: from oldest to newest. - new: from newest to oldest. - short: from shortest to longest. - long: from longest to shortest. - a: alphabetical order. - z: reverse alphabetical order. If the sortType is not one of these 6 options, a copy of toSort is returned. |
+
+**Example**
+
+```js
+// [Monday, Tuesday, Wednesday, Thursday], 'short' --> [Monday, Tuesday, Thursday, Wednesday]
+```
+
+**Example**
+
+```js
+// [Monday, Tuesday, Wednesday, Thursday], 'z' --> [Wednesday, Tuesday, Thursday, Monday]
+```
 
 </details>
 
@@ -264,6 +334,17 @@ Convert user input list items to an array of list items.
 ---
 
 <details><summary><a href="../../client/data.js" id="clientdatajs">../client/data.js</a></summary>
+
+<a name="data"></a>
+
+## data
+
+**Properties**
+
+| Name   | Type                | Description                                                                      |
+| ------ | ------------------- | -------------------------------------------------------------------------------- |
+| keys   | <code>string</code> | A key is assigned for every list item the user inputs and displayed to the user. |
+| values | <code>string</code> | A description inputted for each list item by the user and displayed.             |
 
 </details>
 
