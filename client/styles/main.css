@@ -173,13 +173,6 @@ body {
   cursor: pointer;
   stroke: #647980;
 }
-.delete-btn:hover :nth-child(n) {
-  stroke: #bc0808;
-}
-
-.delete-btn:active :nth-child(n) {
-  stroke: #8eaab2;
-}
 
 .edit-btn {
   margin-right: 4px;
@@ -189,6 +182,14 @@ body {
 .edit-btn :nth-child(n) {
   cursor: pointer;
   stroke: #647980;
+}
+
+.delete-btn:hover :nth-child(n) {
+  stroke: #bc0808;
+}
+
+.delete-btn:active :nth-child(n) {
+  stroke: #8eaab2;
 }
 
 .edit-btn:hover :nth-child(n) {
